@@ -1,0 +1,258 @@
+@mixin overlays{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+@mixin Charts{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+@mixin imageFormat{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+@mixin lineFormat{
+    border-bottom: 0.8px solid #acacad;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@mixin percentage{
+    color: black;
+        font-weight: 600;
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px 6px;
+        box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.262) !important;
+}
+
+@mixin cardFormat{
+    background-color: white;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15) !important;
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    @include breakpoints(small){
+      max-width: 400px;
+    }
+}
+
+@mixin circleTwo{
+    .skill {
+        width: 45px;
+        height: 45px;
+        position: relative;
+        margin-top: 10px;
+        .outer {
+          height: 46px;
+          width: 46px;
+          border-radius: 50%;
+          background-color: #00000029;
+          padding: 4px;
+          .inner {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            #number {
+              font-weight: bold;
+              font-size: large;
+              &:before {
+                content: "";
+                position: absolute;
+                font-size: medium;
+                width: 35px;
+                height: 35px;
+                bottom: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                right: 40%;
+                border-radius: 50%;
+                background-color: white;
+              }
+            }
+          }
+        }
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          circle {
+            fill: none;
+            stroke-width: 6px;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 200;
+            stroke: #147ad6;
+          }
+        }
+      }
+}
+
+@mixin Circle{
+    .skill {
+        width: 75px;
+        height: 75px;
+        position: relative;
+        .outer {
+          height: 66px;
+          width: 66px;
+          border-radius: 50%;
+          background-color: #00000029;
+          padding: 4px;
+          .inner {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            #number {
+              font-weight: bold;
+              font-size: large;
+              &::before {
+                content: "76%";
+                position: absolute;
+                font-size: medium;
+                width: 53px;
+                height: 53px;
+                bottom: 8%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                right: 7.5%;
+                border-radius: 50%;
+                background-color: white;
+              }
+            }
+          }
+        }
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          circle {
+            fill: none;
+            stroke-width: 6px;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 150;
+            stroke: #147ad6;
+          }
+          .circl-1 {
+            stroke: #147ad6;
+          }
+          .circl-2 {
+            stroke: #ec6666;
+          }
+          .circl-3 {
+            stroke: #79d2de;
+          }
+        }
+      }
+}
+
+@mixin insideCard{
+  .content {
+    > div:first-child {
+      span:first-of-type {
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+      }
+      span:last-of-type {
+        color: #4bc50f;
+        font-size: 17px;
+      }
+    }
+    > div:nth-child(2) {
+      span:first-of-type {
+        font-size: 16px;
+        span {
+          font-size: 18px;
+        }
+      }
+      > span:last-of-type {
+        color: #ffa200;
+        font-size: 17px;
+      }
+    }
+    > p:nth-of-type(1) {
+      color: #646b79;
+      font-size: 16px;
+      letter-spacing: 0.8px;
+      margin-top: 10px;
+    }
+    > p:nth-of-type(2) {
+      font-size: 14px;
+      color: #e57989;
+    }
+    div.comments {
+      background-color: #f3f0f0;
+      padding: 10px 15px;
+      > p {
+        font-size: 14px;
+        color: #646b79;
+      }
+      > p:nth-of-type(2) {
+        color: black;
+        margin-bottom: 5px;
+      }
+      div.line {
+        border-bottom: 1px solid rgb(110, 110, 110);
+      }
+      > div:last-child {
+        span {
+          font-size: 14px;
+          color: gray;
+        }
+      }
+    }
+    > div:last-of-type {
+      background-color: #6864b945;
+      border: 1px solid #6864b9;
+      padding: 5px 15px;
+      > p {
+        font-size: 14px;
+      }
+      input {
+        width: 100%;
+        max-width: 300px;
+        border: 0;
+        background-color: transparent;
+        &:focus {
+          outline: none;
+        }
+      }
+      span {
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        &:hover {
+          transform: translateY(-3px);
+          color: rgb(82, 82, 82);
+        }
+      }
+    }
+  }
+}
+
