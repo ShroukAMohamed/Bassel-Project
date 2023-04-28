@@ -2,13 +2,17 @@
   <div class="bg-img">
     <transition name="fade" appear>
       <div
-        class="modal-overlay"
+        class="modal-overlay position-fixed"
         v-if="showModal"
         @click="showModal = false"
       ></div>
     </transition>
     <transition name="slide" appear>
-      <div class="modal" @click="showModal = false" v-if="showModal">
+      <div
+        class="modal position-fixed"
+        @click="showModal = false"
+        v-if="showModal"
+      >
         <div class="row w-100 h-100">
           <div class="col-12 h-100 d-flex align-items-center">
             <div class="modal-card" @click.stop>
