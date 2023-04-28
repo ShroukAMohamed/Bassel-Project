@@ -56,6 +56,7 @@
                         ><i class="fa-solid fa-laptop-code"></i> 4 Tracks</span
                       >
                       <span><i class="fa-solid fa-users"></i> 2 Group</span>
+                      <span><i class="fa-solid fa-download"></i> Download</span>
                     </div>
                   </div>
                 </div>
