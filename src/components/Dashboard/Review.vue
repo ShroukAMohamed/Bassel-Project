@@ -38,7 +38,13 @@
                       <span> <i class="fa-solid fa-star"></i></span>
                     </div>
                   </div>
-                  <textarea name="" id="" cols="30" rows="8"></textarea>
+                  <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="8"
+                    required
+                  ></textarea>
                   <div class="d-flex justify-content-center mt-4">
                     <input
                       type="submit"

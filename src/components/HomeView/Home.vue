@@ -22,7 +22,7 @@
                   <img src="../../assets/MaskGroup5.svg" alt="" />
                   <span class="ms-sm-3 mt-3 mt-sm-0">Login As Student</span>
                 </div>
-                <form class="mt-sm-5" action="">
+                <form class="mt-sm-5" @submit.prevent="student_dashboard">
                   <input
                     class="d-block"
                     placeholder="Email"
@@ -36,9 +36,7 @@
                     required
                   />
                   <div class="d-flex justify-content-center mt-5 mb-5">
-                    <router-link to="/Dashboard"
-                      ><input type="submit" value="Login"
-                    /></router-link>
+                    <input type="submit" value="Login" />
                   </div>
                 </form>
               </div>
@@ -85,6 +83,11 @@ export default {
     return {
       showModal: false,
     };
+  },
+  methods: {
+    student_dashboard() {
+      this.$router.push("/Dashboard");
+    },
   },
 };
 </script>
@@ -139,23 +142,22 @@ export default {
           outline: none;
         }
       }
-      a {
+
+      input[type="submit"] {
+        border: 0;
+        font-size: 18px;
+        border: 0;
+        color: white;
+        box-shadow: 0px 3px 6px #2923417a;
+        text-decoration: none;
+        padding: 10px 30px;
+        margin: auto;
+        border-radius: 25px;
+        background-color: transparent;
         background-color: #292341;
         text-align: center;
         width: 100%;
         max-width: 200px;
-        input[type="submit"] {
-          border: 0;
-          font-size: 18px;
-          border: 0;
-          color: white;
-          box-shadow: 0px 3px 6px #2923417a;
-          text-decoration: none;
-          padding: 10px 30px;
-          margin: auto;
-          border-radius: 25px;
-          background-color: transparent;
-        }
       }
     }
   }

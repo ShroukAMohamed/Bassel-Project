@@ -14,39 +14,39 @@
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input type="text" placeholder="Email" /><i
+            <input type="text" placeholder="Email" required /><i
               class="fa-solid fa-envelope"
             ></i>
           </div>
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input type="text" placeholder="Phone Number" /><i
+            <input type="text" placeholder="Phone Number" required /><i
               class="fa-solid fa-phone"
             ></i>
           </div>
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input type="text" placeholder="Detailed Address" /><i
+            <input type="text" placeholder="Detailed Address" required /><i
               class="fa-solid fa-location-dot"
             ></i>
           </div>
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input type="text" placeholder="Date of birth" /><i
+            <input type="text" placeholder="Date of birth" required /><i
               class="fa-solid fa-calendar-days"
             ></i>
           </div>
           <div class="Gender ps-md-5 d-flex justify-content-between">
             <span>Gender</span>
             <div class="d-inline">
-              <input id="male" type="radio" name="same" />
+              <input id="male" type="radio" name="same" required />
               <label class="" for="male">Male</label>
             </div>
             <div class="d-inline">
-              <input name="same" id="female" type="radio" />
+              <input name="same" id="female" type="radio" required />
               <label class="ms-2" for="female">Female</label>
             </div>
           </div>

@@ -19,9 +19,13 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="d-flex justify-content-between align-items-center">
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-sm-between justify-content-center align-items-center"
+              >
                 <p class="Attend-header text-start">Course Attendance</p>
-                <div class="d-flex justify-content-end pt-3">
+                <div
+                  class="d-flex justify-content-center justify-content-sm-end pt-3"
+                >
                   <div class="me-3 text-start">
                     <p><span>20/50</span> sessions</p>
                     <span>60% completed</span>
@@ -104,9 +108,13 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="d-flex justify-content-between align-items-center">
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-sm-between justify-content-center align-items-center"
+              >
                 <p class="Attend-header text-start">Course Attendance</p>
-                <div class="d-flex justify-content-end pt-3">
+                <div
+                  class="d-flex justify-content-center justify-content-sm-end pt-3"
+                >
                   <div class="me-3 text-start">
                     <p><span>20/50</span> sessions</p>
                     <span>60% completed</span>

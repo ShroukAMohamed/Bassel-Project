@@ -26,16 +26,16 @@
           </div>
           <div class="row justify-content-center align-items-center pt-5">
             <div class="col-lg-5 col-md-6 col-12">
-              <AvCourses />
+              <AvCourses name="web development" />
             </div>
             <div class="col-lg-5 col-md-6 col-12 gy-5 gy-md-0">
-              <AvCourses />
+              <AvCourses :name="course_name" />
             </div>
           </div>
           <div class="Hide">
             <div class="row justify-content-center align-items-center pt-5">
               <div class="col-lg-5 col-md-6 col-12">
-                <AvCourses />
+                <AvCourses name="flutter" />
               </div>
               <div class="col-lg-5 col-md-6 col-12 gy-5 gy-md-0">
                 <AvCourses />
@@ -43,10 +43,10 @@
             </div>
             <div class="row justify-content-center align-items-center pt-5">
               <div class="col-lg-5 col-md-6 col-12">
-                <AvCourses />
+                <AvCourses name="abc" />
               </div>
               <div class="col-lg-5 col-md-6 col-12 gy-5 gy-md-0">
-                <AvCourses />
+                <AvCourses name="secuity" />
               </div>
             </div>
           </div>
@@ -68,6 +68,11 @@ import AvCourses from "./AvailableCourses/AvCourses.vue";
 export default {
   name: "CoursesComponent",
   components: { AvCourses },
+  data() {
+    return {
+      course_name: "test course",
+    };
+  },
   methods: {
     showFunction() {
       $(".Hide").fadeIn();

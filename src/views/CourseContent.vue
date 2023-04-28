@@ -51,7 +51,7 @@
                         interdum tortor. Morbi in nibh faucibus, iaculis lorem
                       </p>
                     </div>
-                    <div class="options">
+                    <div class="options d-flex justify-content-around w-100">
                       <span
                         ><i class="fa-solid fa-laptop-code"></i> 4 Tracks</span
                       >
@@ -206,7 +206,6 @@ export default {
         }
         .options {
           span {
-            padding: 0 30px;
             font-size: 18px;
             font-weight: bold;
             @include breakpoints(mobile) {

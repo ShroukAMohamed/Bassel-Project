@@ -6,7 +6,7 @@
       alt=""
     />
     <p class="d-flex justify-content-between mt-3">
-      Web Development
+      {{ name }}
       <span
         ><i class="fa-solid fa-star me-1"></i>
         <i class="fa-solid fa-star me-1"></i>
@@ -27,6 +27,7 @@
 <script>
 export default {
   name: "AvCourses",
+  props: ["name"],
 };
 </script>
 

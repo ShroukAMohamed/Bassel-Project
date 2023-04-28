@@ -11,10 +11,10 @@
                 </h2>
                 <form action="">
                   <div class="d-flex flex-column">
-                    <input type="text" placeholder="Full Name" />
-                    <input type="text" placeholder="Phone Number" />
-                    <input type="text" placeholder="Email" />
-                    <input type="text" placeholder="Location" />
+                    <input type="text" placeholder="Full Name" required />
+                    <input type="text" placeholder="Phone Number" required />
+                    <input type="text" placeholder="Email" required />
+                    <input type="text" placeholder="Location" required />
 
                     <div class="Selection d-flex justify-content-center">
                       <select name="" id="">
@@ -27,6 +27,7 @@
                     </div>
 
                     <textarea
+                      required
                       placeholder="Description"
                       name=""
                       id=""

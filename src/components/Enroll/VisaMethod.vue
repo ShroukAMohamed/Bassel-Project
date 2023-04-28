@@ -57,7 +57,6 @@
               data-bs-target="#exampleModal"
               data-bs-toggle="modal"
               data-bs-dismiss="modal"
-              @click="hideModal('#secondModal')"
             >
               Confirm
             </button>

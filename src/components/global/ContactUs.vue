@@ -19,9 +19,9 @@
           </div>
           <div class="modal-body">
             <div class="modal-card">
-              <h3 class="text-center mb-5 mt-3">Contact Us</h3>
+              <h3 class="text-center mb-4 mt-3">Contact Us</h3>
               <form action="">
-                <textarea name="" id="" cols="30" rows="12"></textarea>
+                <textarea name="" id="" cols="30" rows="10" required></textarea>
                 <div class="d-flex justify-content-center mt-4">
                   <input
                     type="submit"

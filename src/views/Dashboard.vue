@@ -199,11 +199,19 @@ export default {
         @include breakpoints(small) {
           max-width: 600px;
         }
+        h3 {
+          @include breakpoints(mobile) {
+            font-size: 18px;
+          }
+        }
 
         p:nth-child(1) {
           color: rgb(86, 86, 87);
           font-size: 17px;
           margin-bottom: 5px;
+          @include breakpoints(mobile) {
+            font-size: 14px;
+          }
           span {
             cursor: pointer;
           }
