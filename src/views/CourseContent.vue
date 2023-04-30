@@ -146,13 +146,13 @@ export default {
         width: 100%;
         height: 60vh;
         @include breakpoints(mobile) {
-          background-position: 30% 100%;
+          background-position: 20% 100%;
           height: 80vh;
         }
 
         .overlay {
           @include overlays;
-          background-color: rgba(0, 0, 0, 0.367);
+          background-color: rgba(0, 0, 0, 0.3);
         }
         .enroll {
           background-color: white;
@@ -194,7 +194,7 @@ export default {
         }
         .text-style {
           font-size: 18px;
-          width: 100%;
+          width: 90%;
           max-width: 500px;
           margin: 20px 0;
           text-align: center;

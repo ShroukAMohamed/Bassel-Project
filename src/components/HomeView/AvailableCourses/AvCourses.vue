@@ -15,8 +15,7 @@
       ></span>
     </p>
     <p>
-      Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi
-      in nibh faucibus, iaculis lorem vitae, cursus velit
+      {{ details }}
     </p>
     <router-link to="/CourseContent" class="btn btn-outline-secondary"
       >See More</router-link
@@ -27,7 +26,7 @@
 <script>
 export default {
   name: "AvCourses",
-  props: ["name"],
+  props: ["name", "details"],
 };
 </script>
 
@@ -49,8 +48,8 @@ export default {
   }
   p:last-of-type {
     color: #515661;
-    font-size: 14px;
-    width: 88%;
+    font-size: 16px;
+    width: 100%;
     letter-spacing: 1px;
   }
   a {

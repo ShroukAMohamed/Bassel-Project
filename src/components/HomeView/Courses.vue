@@ -8,7 +8,7 @@
               <h2>Available Courses</h2>
             </div>
             <div class="col-lg-5 col-md-6 gy-4 order-2 order-md-1 col-12">
-              <AvCourses />
+              <AvCourses :name="course_name" :details="course_details" />
             </div>
             <div
               class="col-md-5 col-12 d-flex gy-4 order-md-last order-1 justify-content-center align-items-center"
@@ -26,27 +26,27 @@
           </div>
           <div class="row justify-content-center align-items-center pt-5">
             <div class="col-lg-5 col-md-6 col-12">
-              <AvCourses name="web development" />
+              <AvCourses :name="course_name" :details="course_details" />
             </div>
             <div class="col-lg-5 col-md-6 col-12 gy-5 gy-md-0">
-              <AvCourses :name="course_name" />
+              <AvCourses :name="course_name" :details="course_details" />
             </div>
           </div>
           <div class="Hide">
             <div class="row justify-content-center align-items-center pt-5">
               <div class="col-lg-5 col-md-6 col-12">
-                <AvCourses name="flutter" />
+                <AvCourses :name="course_name" :details="course_details" />
               </div>
               <div class="col-lg-5 col-md-6 col-12 gy-5 gy-md-0">
-                <AvCourses />
+                <AvCourses :name="course_name" :details="course_details" />
               </div>
             </div>
             <div class="row justify-content-center align-items-center pt-5">
               <div class="col-lg-5 col-md-6 col-12">
-                <AvCourses name="abc" />
+                <AvCourses :name="course_name" :details="course_details" />
               </div>
               <div class="col-lg-5 col-md-6 col-12 gy-5 gy-md-0">
-                <AvCourses name="secuity" />
+                <AvCourses :name="course_name" :details="course_details" />
               </div>
             </div>
           </div>
@@ -70,7 +70,9 @@ export default {
   components: { AvCourses },
   data() {
     return {
-      course_name: "test course",
+      course_name: "Web Develpment",
+      course_details:
+        "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus, iaculis lorem vitae, cursus velit.",
     };
   },
   methods: {

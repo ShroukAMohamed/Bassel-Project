@@ -226,6 +226,10 @@ export default {
     border-radius: 28px;
     width: 100%;
     max-width: 280px;
+    @include breakpoints(mobile) {
+      font-size: 16px;
+      width: 80%;
+    }
   }
 
   button:first-of-type:not(.btn-close) {

@@ -5,16 +5,20 @@
         <div class="col-lg-4 col-12 d-flex d-lg-block justify-content-center">
           <img src="../../assets/Full-Logo.png" alt="" />
         </div>
-        <div class="col-lg-4 col-6 d-flex justify-content-center gy-5 gy-lg-0">
+        <div
+          class="col-lg-4 col-12 text-center text-sm-start d-flex justify-content-center gy-5 gy-lg-0"
+        >
           <div>
             <p class="fw-bold">Quick Access</p>
             <p>Home</p>
-            <p>Courses</p>
             <p>Customer / Contact Us</p>
+            <p>Courses</p>
             <p>Login</p>
           </div>
         </div>
-        <div class="col-lg-4 col-6 d-flex justify-content-center gy-5 gy-lg-0">
+        <div
+          class="col-lg-4 col-12 text-center text-sm-start d-flex justify-content-center gy-5 gy-lg-0"
+        >
           <div>
             <p class="fw-bold">Others</p>
             <p>Privacy Policy</p>

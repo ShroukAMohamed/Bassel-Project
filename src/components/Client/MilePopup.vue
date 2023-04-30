@@ -34,66 +34,36 @@
               class="modal-card d-flex flex-column-reverse flex-md-row justify-content-around mt-3 mb-5"
             >
               <div class="part-1">
-                <div class="mt-4">
-                  <div class="d-flex justify-content-between">
-                    <span>Milestone Title</span>
-                    <span>Status</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>12 Jan - 12 Mar</span>
-                    <span>see more <i class="fa-solid fa-caret-down"></i></span>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <div class="d-flex justify-content-between">
-                    <span>Milestone Title</span>
-                    <span>Status</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>12 Jan - 12 Mar</span>
-                    <span>see more <i class="fa-solid fa-caret-down"></i></span>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <div class="d-flex justify-content-between">
-                    <span>Milestone Title</span>
-                    <span>Status</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>12 Jan - 12 Mar</span>
-                    <span>see more <i class="fa-solid fa-caret-down"></i></span>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <div class="d-flex justify-content-between">
-                    <span>Milestone Title</span>
-                    <span>Status</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>12 Jan - 12 Mar</span>
-                    <span>see more <i class="fa-solid fa-caret-down"></i></span>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <div class="d-flex justify-content-between">
-                    <span>Milestone Title</span>
-                    <span>Status</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>12 Jan - 12 Mar</span>
-                    <span>see more <i class="fa-solid fa-caret-down"></i></span>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <div class="d-flex justify-content-between">
-                    <span>Milestone Title</span>
-                    <span>Status</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>12 Jan - 12 Mar</span>
-                    <span>see more <i class="fa-solid fa-caret-down"></i></span>
-                  </div>
-                </div>
+                <ProjectCard
+                  :Milestone_title="Milestone_title"
+                  :Status="Status"
+                  :ProjDate="ProjDate"
+                />
+                <ProjectCard
+                  :Milestone_title="Milestone_title"
+                  :Status="Status"
+                  :ProjDate="ProjDate"
+                />
+                <ProjectCard
+                  :Milestone_title="Milestone_title"
+                  :Status="Status"
+                  :ProjDate="ProjDate"
+                />
+                <ProjectCard
+                  :Milestone_title="Milestone_title"
+                  :Status="Status"
+                  :ProjDate="ProjDate"
+                />
+                <ProjectCard
+                  :Milestone_title="Milestone_title"
+                  :Status="Status"
+                  :ProjDate="ProjDate"
+                />
+                <ProjectCard
+                  :Milestone_title="Milestone_title"
+                  :Status="Status"
+                  :ProjDate="ProjDate"
+                />
               </div>
               <div class="Line d-none d-md-block"></div>
               <div class="part2">
@@ -104,60 +74,16 @@
                     alt=""
                   />
                 </div>
-
-                <div class="Card-inside">
-                  <div class="content">
-                    <div class="d-flex justify-content-between">
-                      <span>Milestone Title</span>
-                      <span>Status</span>
-                    </div>
-                    <div class="d-lg-flex justify-content-between">
-                      <span class="d-block"
-                        ><span><i class="fa-solid fa-calendar-days"></i></span>
-                        12 Jan - 12 Mar</span
-                      >
-                      <span
-                        ><i class="fa-solid fa-wallet"></i> Due : 1000 EGP</span
-                      >
-                    </div>
-                    <p>
-                      Mauris imperdiet orci dapibus, commodo libero nec,
-                      interdum tortor. Morbi in nibh faucibus, iaculis lorem
-                      vitae, cursus velit. Etiam non
-                    </p>
-                    <span
-                      ><i class="fa-solid fa-comments"></i> Comments &
-                      Replies</span
-                    >
-                    <p class="text-center mt-2">
-                      comment and replies disappear after 2 months
-                    </p>
-                    <div class="comments">
-                      <p>
-                        Aliquam in bibendum mauris. Sed vitae erat vel velit
-                        blandit pharetra vitae nec ante. Cras at est
-                      </p>
-                      <div class="line"></div>
-                      <p class="mt-2">Reply</p>
-                      <p>
-                        Aliquam in bibendum mauris. Sed vitae erat vel velit
-                        blandit pharetra vitae nec ante. Cras at est
-                      </p>
-                      <div class="text-end">
-                        <span> 12 Mar </span>
-                      </div>
-                    </div>
-                    <div class="mt-3 mb-3">
-                      <p class="mb-0">Leave a comment</p>
-                      <div
-                        class="d-flex justify-content-between align-items-end"
-                      >
-                        <input type="text" />
-                        <span>Send</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ProjectDetails
+                  :Milestone_title="Milestone_title"
+                  :Status="Status"
+                  :ProjDate="ProjDate"
+                  :ProjSalary="ProjSalary"
+                  :Details="Details"
+                  :Comment="Comment"
+                  :Reply="Reply"
+                  :comment_date="Comment_Date"
+                />
               </div>
             </div>
           </div>
@@ -168,8 +94,26 @@
 </template>
 
 <script>
+import ProjectDetails from "./ClientProject/ProjectDetails.vue";
+import ProjectCard from "./ClientProject/ProjectCards.vue";
 export default {
   name: "MilePopup",
+  data() {
+    return {
+      Status: "Status",
+      Milestone_title: "Milestone Title",
+      ProjDate: "12 Jan -12 Mar",
+      ProjSalary: "Due : 1000 EGP",
+      Details:
+        "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus, iaculis lorem vitae, cursus velit. Etiam non",
+      Comment:
+        "Aliquam in bibendum mauris. Sed vitae erat vel velit blandit pharetra vitae nec ante. Cras at est",
+      Reply:
+        "Aliquam in bibendum mauris. Sed vitae erat vel velit blandit pharetra vitae nec ante. Cras at est",
+      Comment_Date: "12 Mar",
+    };
+  },
+  components: { ProjectDetails, ProjectCard },
 };
 </script>
 
@@ -184,31 +128,6 @@ export default {
     .part-1 {
       width: 100%;
       max-width: 450px;
-      > div {
-        background-color: white;
-        box-shadow: 0px 3px 6px #00000029;
-        padding: 10px 15px;
-        > div {
-          span:first-of-type {
-            color: rgb(88, 87, 87);
-          }
-        }
-        > div:first-child {
-          span:first-of-type {
-            font-size: 18px;
-            letter-spacing: 0.5px;
-          }
-          span:last-of-type {
-            color: #4bc50f;
-          }
-        }
-        > div:last-child {
-          span:last-of-type {
-            font-size: 14px;
-            cursor: pointer;
-          }
-        }
-      }
     }
     .Line {
       position: relative;

@@ -2,8 +2,8 @@
   <div class="Job ps-3">
     <div class="d-flex justify-content-between pb-1">
       <span class="fw-bold"
-        ><img class="pe-2" src="../../../assets/MaskGroup47.svg" alt="" /> Job
-        Title</span
+        ><img class="pe-2" src="../../../assets/MaskGroup47.svg" alt="" />
+        {{ name }}</span
       >
       <button
         data-bs-target="#jobsModal"
@@ -14,11 +14,10 @@
       </button>
     </div>
     <div class="line"></div>
-    <span class="d-block pt-1 pb-2">3 years experience -salary: 5000 egp</span>
+    <span class="d-block pt-1 pb-2">{{ requirements }}</span>
     <div class="line"></div>
     <p>
-      Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi
-      in nibh faucibus, iaculis lorem vitae, cursus velit.
+      {{ details }}
     </p>
   </div>
 </template>
@@ -26,6 +25,7 @@
 <script>
 export default {
   name: "AvJobs",
+  props: ["name", "requirements", "details"],
 };
 </script>
 

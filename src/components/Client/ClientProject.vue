@@ -2,76 +2,37 @@
   <div class="Card">
     <div class="p-4">
       <div class="d-flex justify-content-between">
-        <p class="mb-0">Project Name - <span>web development</span></p>
+        <p class="mb-0">
+          Project Name - <span>{{ ProjectName }}</span>
+        </p>
         <span class="text-center"
-          ><i class="fa-solid fa-clock"></i> Status</span
+          ><i class="fa-solid fa-clock"></i> {{ Status }}</span
         >
       </div>
       <p class="mt-2 mb-2">
-        Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor.
-        Morbi in nibh faucibus, iaculis lorem vitae, cursus velit.
+        {{ ProjDetails }}
       </p>
       <span
-        ><i class="fa-solid fa-calendar-days"></i> Start Date: 1/1/2023 -
-        1/1/2024</span
+        ><i class="fa-solid fa-calendar-days"></i> Start Date:
+        {{ start_date }}</span
       >
       <div class="line mt-3"></div>
-      <p class="mt-2 mb-2">Milestones 20</p>
-      <div class="Card-inside">
-        <div class="content">
-          <div class="d-flex justify-content-between">
-            <span>Milestone Title</span>
-            <span>Status</span>
-          </div>
-          <div class="d-lg-flex justify-content-between">
-            <span class="d-block"
-              ><span><i class="fa-solid fa-calendar-days"></i></span> 12 Jan -
-              12 Mar</span
-            >
-            <span><i class="fa-solid fa-wallet"></i> Due : 1000 EGP</span>
-          </div>
-          <p>
-            Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor.
-            Morbi in nibh faucibus, iaculis lorem vitae, cursus velit. Etiam non
-          </p>
-          <span><i class="fa-solid fa-comments"></i> Comments & Replies</span>
-          <p class="text-center mt-2">
-            comment and replies disappear after 2 months
-          </p>
-          <div class="comments">
-            <p>
-              Aliquam in bibendum mauris. Sed vitae erat vel velit blandit
-              pharetra vitae nec ante. Cras at est
-            </p>
-            <div class="line"></div>
-            <p class="mt-2">Reply</p>
-            <p>
-              Aliquam in bibendum mauris. Sed vitae erat vel velit blandit
-              pharetra vitae nec ante. Cras at est
-            </p>
-            <div class="text-end">
-              <span> 12 Mar </span>
-            </div>
-          </div>
-          <div class="mt-3 mb-3">
-            <p class="mb-0">Leave a comment</p>
-            <div class="d-flex justify-content-between align-items-end">
-              <input type="text" />
-              <span>Send</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-4">
-        <div class="d-flex justify-content-between">
-          <span>Milestone Title</span>
-          <span>Status</span>
-        </div>
-        <div class="d-flex justify-content-between">
-          <span>12 Jan - 12 Mar</span>
-          <span>see more <i class="fa-solid fa-caret-down"></i></span>
-        </div>
-      </div>
+      <p class="mt-2 mb-2">Milestones {{ milestones_num }}</p>
+      <ProjectDetails
+        :Milestone_title="Milestone_title"
+        :Status="Status"
+        :ProjDate="ProjDate"
+        :ProjSalary="ProjSalary"
+        :Details="Details"
+        :Comment="Comment"
+        :Reply="Reply"
+        :comment_date="Comment_Date"
+      />
+      <ProjectCard
+        :Milestone_title="Milestone_title"
+        :Status="Status"
+        :ProjDate="ProjDate"
+      />
       <button
         class="mt-4 mb-3"
         data-bs-target="#mileModal"
@@ -85,8 +46,31 @@
 </template>
 
 <script>
+import ProjectDetails from "./ClientProject/ProjectDetails.vue";
+import ProjectCard from "./ClientProject/ProjectCards.vue";
 export default {
   name: "ClientProject",
+  components: { ProjectDetails, ProjectCard },
+  data() {
+    return {
+      ProjectName: "Web Development",
+      Status: "Status",
+      ProjDetails:
+        "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus, iaculis lorem vitae, cursus velit.",
+      start_date: "1/1/2023 - 1/1/2024",
+      milestones_num: "20",
+      Milestone_title: "Milestone Title",
+      ProjDate: "12 Jan -12 Mar",
+      ProjSalary: "Due : 1000 EGP",
+      Details:
+        "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus, iaculis lorem vitae, cursus velit. Etiam non",
+      Comment:
+        "Aliquam in bibendum mauris. Sed vitae erat vel velit blandit pharetra vitae nec ante. Cras at est",
+      Reply:
+        "Aliquam in bibendum mauris. Sed vitae erat vel velit blandit pharetra vitae nec ante. Cras at est",
+      Comment_Date: "12 Mar",
+    };
+  },
 };
 </script>
 
@@ -133,11 +117,7 @@ export default {
       font-size: 18px;
       letter-spacing: 0.5px;
     }
-    .Card-inside {
-      background-color: white;
-      padding: 15px;
-      @include insideCard;
-    }
+
     > div:last-of-type {
       background-color: white;
       padding: 10px 15px;

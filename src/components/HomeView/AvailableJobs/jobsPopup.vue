@@ -31,36 +31,40 @@
                     <div
                       class="Input ps-md-5 d-flex justify-content-between align-items-center"
                     >
-                      <input type="text" placeholder="Full Name" /><i
+                      <input type="text" placeholder="Full Name" required /><i
                         class="fa-solid fa-user"
                       ></i>
                     </div>
                     <div
                       class="Input ps-md-5 d-flex justify-content-between align-items-center"
                     >
-                      <input type="text" placeholder="Email" /><i
+                      <input type="text" placeholder="Email" required /><i
                         class="fa-solid fa-envelope"
                       ></i>
                     </div>
                     <div
                       class="Input ps-md-5 d-flex justify-content-between align-items-center"
                     >
-                      <input type="text" placeholder="Phone Number" /><i
-                        class="fa-solid fa-phone"
-                      ></i>
+                      <input
+                        type="text"
+                        placeholder="Phone Number"
+                        required
+                      /><i class="fa-solid fa-phone"></i>
                     </div>
                     <div
                       class="Input ps-md-5 d-flex justify-content-between align-items-center"
                     >
-                      <input type="text" placeholder="Detailed Address" /><i
-                        class="fa-solid fa-location-dot"
-                      ></i>
+                      <input
+                        type="text"
+                        placeholder="Detailed Address"
+                        required
+                      /><i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div
                       class="Input ps-md-5 d-flex justify-content-between align-items-center"
                     >
                       <label class="w-100 File" for="file">CV File</label>
-                      <input type="file" id="file" accept="pdf/*" /><i
+                      <input type="file" id="file" accept="pdf/*" required /><i
                         class="fa-solid fa-file-csv"
                       ></i>
                     </div>
@@ -107,11 +111,11 @@ export default {
         width: 90%;
         max-width: 500px;
         margin: auto;
-        padding: 5px 16px;
+        padding: 8px 16px;
         margin-top: 25px;
         border-radius: 25px;
         border: 0.8px solid black;
-        font-size: 22px;
+        font-size: 18px;
         @include breakpoints(mobile) {
           font-size: 16px;
           padding: 6px 16px;
@@ -125,7 +129,7 @@ export default {
           }
           &::placeholder {
             letter-spacing: 1.3px;
-            font-size: 17px;
+            font-size: 18px;
             @include breakpoints(mobile) {
               font-size: 15px;
               letter-spacing: normal;
@@ -140,7 +144,6 @@ export default {
           color: gray;
           font-weight: normal;
           letter-spacing: 1.3px;
-          padding: 3px 0;
           cursor: pointer;
           @include breakpoints(mobile) {
             font-size: 15px;

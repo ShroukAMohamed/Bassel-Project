@@ -11,35 +11,35 @@
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input disabled type="text" placeholder="Full Name" /><i
+            <input disabled type="text" :placeholder="Full_Name" /><i
               class="fa-solid fa-user"
             ></i>
           </div>
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input disabled type="text" placeholder="Email" /><i
+            <input disabled type="text" :placeholder="Email" /><i
               class="fa-solid fa-envelope"
             ></i>
           </div>
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input disabled type="text" placeholder="Phone Number" /><i
+            <input disabled type="text" :placeholder="PhoneـNumber" /><i
               class="fa-solid fa-phone"
             ></i>
           </div>
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input disabled type="text" placeholder="Detailed Address" /><i
+            <input disabled type="text" :placeholder="DetailedـAddress" /><i
               class="fa-solid fa-location-dot"
             ></i>
           </div>
           <div
             class="Input ps-md-5 d-flex justify-content-between align-items-center"
           >
-            <input disabled type="text" placeholder="Date of birth" /><i
+            <input disabled type="text" :placeholder="Birth_Date" /><i
               class="fa-solid fa-calendar-days"
             ></i>
           </div>
@@ -52,11 +52,18 @@
 <script>
 export default {
   name: "RegistInfo",
+  props: [
+    "Full_Name",
+    "Email",
+    "PhoneـNumber",
+    "DetailedـAddress",
+    "Birth_Date",
+  ],
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../global/scss/main.scss";
+@import "./global/scss/main.scss";
 .form-card {
   background-image: white;
   box-shadow: 0px 3px 6px #2923417a;

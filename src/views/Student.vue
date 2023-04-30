@@ -17,7 +17,21 @@
                   />
                 </div>
                 <div class="col-md-6 col-12 gy-5 gy-md-0">
-                  <AttendState />
+                  <div class="Card m-auto">
+                    <h3>Attendance</h3>
+                    <div class="line"></div>
+                    <AttendState
+                      :Course_Name="Course_Name"
+                      :Session_Num="Session_Num"
+                      :Completion="Completion"
+                    />
+                    <div class="line"></div>
+                    <AttendState
+                      :Course_Name="Course_Name"
+                      :Session_Num="Session_Num"
+                      :Completion="Completion"
+                    />
+                  </div>
                 </div>
               </div>
               <div class="Card m-auto me-md-0 mt-5">
@@ -40,14 +54,26 @@
                 <div class="line"></div>
                 <div class="Sessions">
                   <div class="session active">
-                    <SessionsDate />
+                    <SessionsDate
+                      :Course_Title="Course_Title"
+                      :Track_Title="Track_Title"
+                      :Session_Date="Session_Date"
+                    />
                   </div>
                   <div class="session Hidden">
-                    <SessionsDate />
+                    <SessionsDate
+                      :Course_Title="Course_Title"
+                      :Track_Title="Track_Title"
+                      :Session_Date="Session_Date"
+                    />
                   </div>
 
                   <div class="session Hidden">
-                    <SessionsDate />
+                    <SessionsDate
+                      :Course_Title="Course_Title"
+                      :Track_Title="Track_Title"
+                      :Session_Date="Session_Date"
+                    />
                   </div>
                 </div>
                 <!-- <p>Open more</p> -->
@@ -55,7 +81,12 @@
               <div class="Card m-auto me-md-0 mt-5">
                 <h3 class="pb-2">Recommended Courses For You</h3>
                 <div class="line"></div>
-                <Recommended />
+                <Recommended
+                  :CourseNameR="CourseNameR"
+                  :DetailsR="DetailsR"
+                  :Num_Tracks="Num_Tracks"
+                  :Num_Groups="Num_Groups"
+                />
                 <p class="mt-3">Open more</p>
               </div>
             </div>
@@ -64,7 +95,9 @@
                 <div
                   class="d-flex flex-xl-row flex-column pb-1 align-items-center justify-content-xl-between courses-board"
                 >
-                  <h3>Your Courses <span class="ms-1">2</span></h3>
+                  <h3>
+                    Your Courses <span class="ms-1">{{ Courses_Owned }}</span>
+                  </h3>
                   <div class="mt-4 mt-xl-0">
                     <input type="text" placeholder="Search" />
                     <span><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -76,26 +109,53 @@
             </div>
           </div>
           <div class="lastline"></div>
-          <RegistInfo />
+          <RegistInfo
+            :Full_Name="Full_Name"
+            :Email="Email"
+            :PhoneـNumber="PhoneـNumber"
+            :DetailedـAddress="DetailedـAddress"
+            :Birth_Date="Birth_Date"
+          />
         </div>
       </div>
     </div>
     <ReviewPopup />
-    <AttendPopup />
+    <AttendPopup :Session_Num="Session_Num" :Completion="Completion" />
   </div>
 </template>
 
 <script>
-import ReviewPopup from "../components/Dashboard/Review.vue";
-import AttendPopup from "../components/Dashboard/AttendPopup.vue";
-import RegistInfo from "../components/Dashboard/Registered";
-import CoursesOwned from "../components/Dashboard/CoursesOwned.vue";
-import SessionsDate from "../components/Dashboard/SessionsDate.vue";
-import AttendState from "../components/Dashboard/Attendance.vue";
-import Recommended from "../components/Dashboard/Recommend.vue";
+import ReviewPopup from "../components/Student/Review.vue";
+import AttendPopup from "../components/Student/AttendPopup.vue";
+import RegistInfo from "../components/Registered.vue";
+import CoursesOwned from "../components/Student/CoursesOwned.vue";
+import SessionsDate from "../components/Student/SessionsDate.vue";
+import AttendState from "../components/Student/Attendance.vue";
+import Recommended from "../components/Student/Recommend.vue";
 import $ from "jquery";
 export default {
-  name: "DashBoard",
+  name: "StudentDashboard",
+  data() {
+    return {
+      Course_Name: "Course Name",
+      Session_Num: "20/50",
+      Completion: "60%",
+      Course_Title: "Course Title here",
+      Track_Title: "Track Title here",
+      Session_Date: "Mon 9:30 am",
+      CourseNameR: "Course Title here",
+      DetailsR:
+        "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus,",
+      Num_Tracks: "4 Tracks",
+      Num_Groups: "2 Groups",
+      Courses_Owned: "2",
+      Full_Name: "Full Name",
+      Email: "Email",
+      PhoneـNumber: "Phone Number",
+      DetailedـAddress: "Detailed Address",
+      Birth_Date: "Date of birth",
+    };
+  },
   components: {
     ReviewPopup,
     AttendPopup,

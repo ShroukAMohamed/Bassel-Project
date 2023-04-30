@@ -1,7 +1,5 @@
 <template>
-  <div class="Card m-auto">
-    <h3>Attendance</h3>
-    <div class="line"></div>
+  <div>
     <div
       class="d-flex justify-content-between align-items-center pt-3 pb-3"
       data-bs-target="#attendModal"
@@ -9,25 +7,13 @@
       data-bs-dismiss="modal"
     >
       <div>
-        <p>Course Name</p>
-        <p><span>20/50</span> sessions</p>
-        <span>60% completed</span>
+        <p>{{ Course_Name }}</p>
+        <p>
+          <span>{{ Session_Num }}</span> sessions
+        </p>
+        <span>{{ Completion }} completed</span>
       </div>
       <img class="img-fluid" src="../../assets/wavy-line.png" alt="" />
-    </div>
-    <div class="line"></div>
-    <div
-      class="d-flex justify-content-between align-items-center pt-3"
-      data-bs-target="#secondModal"
-      data-bs-toggle="modal"
-      data-bs-dismiss="modal"
-    >
-      <div>
-        <p>Course Name</p>
-        <p><span>20/50</span> sessions</p>
-        <span>60% completed</span>
-      </div>
-      <img class="img-fluid" src="../../assets/wavy-line2.png" alt="" />
     </div>
   </div>
 </template>
@@ -35,6 +21,7 @@
 <script>
 export default {
   name: "AttendState",
+  props: ["Course_Name", "Session_Num", "Completion"],
 };
 </script>
 
@@ -43,9 +30,9 @@ export default {
   max-width: 400px;
   padding: 20px;
   img {
-    width: 35%;
+    width: 30%;
     margin: auto;
-    height: 35%;
+    height: 30%;
   }
   .line {
     border-bottom: 1px solid rgb(206, 205, 205);
@@ -68,11 +55,6 @@ export default {
       color: #ff2366;
       font-weight: 300;
       font-size: 13px;
-    }
-  }
-  div:nth-child(5) {
-    span:nth-child(3) {
-      color: #4bc50f;
     }
   }
 }

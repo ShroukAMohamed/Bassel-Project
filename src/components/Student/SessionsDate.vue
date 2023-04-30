@@ -1,11 +1,11 @@
 <template>
   <div class="d-flex justify-content-between">
     <div class="d-flex flex-column">
-      <span>Course Title here</span>
+      <span>{{ Course_Title }}</span>
       <span class="mt-1 mb-1"
-        ><i class="fa-solid fa-laptop-code pe-2"></i>Track Title here</span
+        ><i class="fa-solid fa-laptop-code pe-2"></i>{{ Track_Title }}</span
       >
-      <span>Mon 9:30 am</span>
+      <span>{{ Session_Date }}</span>
     </div>
     <img
       class="img-fluid w-25 h-25"
@@ -18,6 +18,7 @@
 <script>
 export default {
   name: "SessionsDate",
+  props: ["Course_Title", "Track_Title", "Session_Date"],
 };
 </script>
 

@@ -15,7 +15,7 @@
                 >
                   <h3>Your Dashboard</h3>
                   <p class="mt-4 m-auto ms-md-0 text-start">
-                    Welcome back, Jerry Garrett
+                    Welcome back, {{ client_name }}
                   </p>
                   <img
                     class="img-fluid mt-4"
@@ -30,8 +30,8 @@
               <div class="Card mt-4 m-auto me-md-3 me-lg-0">
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <h3>$233K</h3>
-                    <p class="mb-0">Project name due</p>
+                    <h3>{{ salary }}</h3>
+                    <p class="mb-0">{{ project_name }}</p>
                   </div>
 
                   <span
@@ -50,7 +50,9 @@
                 <div
                   class="d-flex flex-column align-items-center flex-xl-row pb-3 justify-content-xl-between courses-board"
                 >
-                  <h3>Your Projects <span class="ms-1">2</span></h3>
+                  <h3>
+                    Your Projects <span class="ms-1">{{ project_number }}</span>
+                  </h3>
                   <div class="mt-4 mt-xl-0">
                     <input type="text" placeholder="Search" />
                     <span><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -61,7 +63,13 @@
             </div>
           </div>
           <div class="lastline"></div>
-          <RegistInfo />
+          <RegistInfo
+            :Full_Name="Full_Name"
+            :Email="Email"
+            :PhoneـNumber="PhoneـNumber"
+            :DetailedـAddress="DetailedـAddress"
+            :Birth_Date="Birth_Date"
+          />
         </div>
       </div>
     </div>
@@ -69,15 +77,28 @@
 </template>
 
 <script>
-import PaymentComponent from "../components/Client/payment.vue";
-import VisaMethod from "../components/Client/VisaMethod.vue";
-import SuccessComponent from "../components/Client/Success.vue";
+import PaymentComponent from "../components/payment.vue";
+import VisaMethod from "../components/VisaMethod.vue";
+import SuccessComponent from "../components/Success.vue";
 import ClientProject from "../components/Client/ClientProject.vue";
 import MilePopup from "../components/Client/MilePopup.vue";
-import RegistInfo from "../components/Client/Registered";
+import RegistInfo from "../components/Registered.vue";
 import Completion from "@/components/Client/Completion.vue";
 export default {
   name: "ClientBoard",
+  data() {
+    return {
+      client_name: "Jerry Garrett",
+      salary: "$223K",
+      project_name: "Project Name Due",
+      project_number: "2",
+      Full_Name: "Full Name",
+      Email: "Email",
+      PhoneـNumber: "Phone Number",
+      DetailedـAddress: "Detailed Address",
+      Birth_Date: "Date of birth",
+    };
+  },
   components: {
     PaymentComponent,
     VisaMethod,

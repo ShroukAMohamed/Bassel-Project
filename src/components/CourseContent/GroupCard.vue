@@ -140,7 +140,7 @@ export default {
       &:not(:first-child):after {
         content: "";
         position: absolute;
-        width: 10px;
+        margin: 0 5px;
         height: 40px;
         left: -20%;
         top: 10%;

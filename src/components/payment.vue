@@ -22,24 +22,24 @@
               <div
                 class="d-flex justify-content-center align-items-center pb-4"
               >
-                <img src="../../assets/payment_icon.png" alt="" />
+                <img src="../assets/payment_icon.png" alt="" />
                 <span>Payment</span>
               </div>
               <div class="bg-course">
-                <p>Course Name</p>
+                <p>Project Name</p>
               </div>
               <form action="">
                 <div class="method">
-                  <div
+                  <!-- <div
                     class="d-flex justify-content-between align-items-center cash-border"
                   >
                     <div>
                       <input id="vodafone" name="pay" type="radio" />
-                      <label for="vodafone">Vodafone Cash</label>
+                      <label for="vodafone">Vodafone Cash - فودافون كاش</label>
                     </div>
                     <img src="../../assets/cash.png" alt="" />
-                  </div>
-                  <div
+                  </div> -->
+                  <!-- <div
                     class="d-flex justify-content-between align-items-center cash-border"
                   >
                     <div>
@@ -47,7 +47,7 @@
                       <label for="fawry">Fawry - فوري</label>
                     </div>
                     <img src="../../assets/cash.png" alt="" />
-                  </div>
+                  </div> -->
                   <div
                     class="d-flex justify-content-between align-items-center cash-border"
                   >
@@ -55,7 +55,7 @@
                       <input id="cash" name="pay" type="radio" />
                       <label for="cash">Cash - كاش</label>
                     </div>
-                    <img src="../../assets/cash.png" alt="" />
+                    <img src="../assets/cash.png" alt="" />
                   </div>
                   <div
                     class="d-flex justify-content-between align-items-center cash-border"
@@ -72,13 +72,15 @@
                         @click="hideModal('#exampleModal')"
                       />
                     </div>
-                    <img src="../../assets/cash.png" alt="" />
+                    <img src="../assets/cash.png" alt="" />
                   </div>
                 </div>
               </form>
             </div>
           </div>
-          <div class="modal-footer d-flex justify-content-center">
+          <div
+            class="modal-footer border-0 d-flex justify-content-center mt-4 mb-5"
+          >
             <button
               type="button"
               class="btn btn-primary w-50 pb-2 pt-2 rounded-5"
@@ -97,7 +99,7 @@
 </template>
 
 <script>
-import hide_model from "../../../mixin/hide_model.vue";
+import hide_model from "../../mixin/hide_model.vue";
 export default {
   name: "PaymentComponent",
   mixins: [hide_model],
@@ -105,7 +107,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../global/scss/main.scss";
+@import "./global/scss/main.scss";
 .modal-dialog {
   max-width: 800px;
 

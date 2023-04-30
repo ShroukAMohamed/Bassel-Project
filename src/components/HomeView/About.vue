@@ -104,7 +104,7 @@
       </div>
       <div class="gallery-img">
         <div class="container">
-          <div class="row pt-5 pb-5">
+          <div class="row pt-5 pb-5 justify-content-center">
             <div class="col-lg-12 text-center pb-4">
               <h3 class="fw-bold">Gallery</h3>
             </div>

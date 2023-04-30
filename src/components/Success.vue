@@ -21,20 +21,18 @@
             <div
               class="modal-card d-flex flex-column justify-content-center align-items-center"
             >
-              <img class="img-fluid" src="../../assets/Group286.svg" alt="" />
+              <img class="img-fluid" src="../assets/Group286.svg" alt="" />
               <p class="text-center fw-bold">
                 You Applied Successfully to the Coures You Will Have a valuable
                 Learning Time
               </p>
-              <button class="btn btn-primary mb-4" data-bs-dismiss="modal">
-                <router-link
-                  href="#Home"
-                  to="/"
-                  class="rounded-5 pt-2 pb-2 mb-5"
-                >
-                  Back To Home
-                </router-link>
-              </button>
+              <!-- <router-link
+                to="/"
+                @click="hideModal('#thirdModal')"
+                class="btn btn-primary w-50 rounded-5 pt-2 pb-2 mb-5"
+              >
+                Back To Home
+              </router-link> -->
             </div>
           </div>
         </div>
@@ -44,7 +42,7 @@
 </template>
 
 <script>
-import hide_model from "../../../mixin/hide_model.vue";
+import hide_model from "../../mixin/hide_model.vue";
 export default {
   name: "SuccessComponent",
   mixins: [hide_model],
@@ -52,7 +50,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../global/scss/main.scss";
 .modal-dialog {
   max-width: 800px;
   .modal-card {
@@ -63,15 +60,6 @@ export default {
       margin: auto;
       letter-spacing: 1px;
       padding: 40px 0;
-    }
-    button {
-      width: 100%;
-      max-width: 250px;
-      border-radius: 20px;
-      a {
-        text-decoration: none;
-        color: white;
-      }
     }
   }
 }

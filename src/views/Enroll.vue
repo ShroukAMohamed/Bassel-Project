@@ -80,9 +80,9 @@
 
 <script>
 import hide_model from "../../mixin/hide_model";
-import PaymentComponent from "../components/Enroll/payment.vue";
-import SuccessComponent from "../components/Enroll/Success.vue";
-import VisaMethod from "../components/Enroll/VisaMethod.vue";
+import PaymentComponent from "../components/payment.vue";
+import SuccessComponent from "../components/Success.vue";
+import VisaMethod from "../components/VisaMethod.vue";
 import enrollForm from "../components/Enroll/enrollForm.vue";
 export default {
   name: "EnrollPage",

@@ -21,7 +21,7 @@
             <div class="modal-card d-flex justify-content-center">
               <div class="edit-card">
                 <div class="d-flex justify-content-center align-items-center">
-                  <img src="../../assets/payment_icon.png" alt="" />
+                  <img src="../assets/payment_icon.png" alt="" />
                   <span>Add Card</span>
                 </div>
                 <div class="mt-5">
@@ -29,7 +29,7 @@
                   <div class="card-number d-flex">
                     <input id="number" type="text" />
                     <div class="d-flex align-items-center">
-                      <img src="../../assets/visa_card.png" alt="" />
+                      <img src="../assets/visa_card.png" alt="" />
                     </div>
                   </div>
                 </div>
