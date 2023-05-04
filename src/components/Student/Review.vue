@@ -134,7 +134,7 @@ export default {
       background-color: #2e2a41;
       box-shadow: 0px 3px 6px #2923417a;
       color: white;
-      border: 0;
+      border: 0px;
     }
   }
 }
