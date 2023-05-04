@@ -34,9 +34,6 @@ export default {
     margin: auto;
     height: 30%;
   }
-  .line {
-    border-bottom: 1px solid rgb(206, 205, 205);
-  }
   div {
     cursor: pointer;
     p:first-of-type {

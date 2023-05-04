@@ -1,16 +1,22 @@
 <template>
   <div>
-    <section class="courses">
+    <section class="courses block" id="Courses">
       <div class="courses-img">
         <div class="container">
           <div class="row justify-content-lg-center">
             <div class="col-12 order-first text-center gy-4 mb-4 mb-md-5">
               <h2>Available Courses</h2>
             </div>
-            <div class="col-lg-5 col-md-6 gy-4 order-2 order-md-1 col-12">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              class="col-lg-5 col-md-6 gy-4 order-2 order-md-1 col-12"
+            >
               <AvCourses :name="course_name" :details="course_details" />
             </div>
             <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
               class="col-md-5 col-12 d-flex gy-4 order-md-last order-1 justify-content-center align-items-center"
             >
               <div class="course-text">
@@ -24,7 +30,11 @@
               </div>
             </div>
           </div>
-          <div class="row justify-content-center align-items-center pt-5">
+          <div
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            class="row justify-content-center align-items-center pt-5"
+          >
             <div class="col-lg-5 col-md-6 col-12">
               <AvCourses :name="course_name" :details="course_details" />
             </div>
@@ -33,7 +43,11 @@
             </div>
           </div>
           <div class="Hide">
-            <div class="row justify-content-center align-items-center pt-5">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              class="row justify-content-center align-items-center pt-5"
+            >
               <div class="col-lg-5 col-md-6 col-12">
                 <AvCourses :name="course_name" :details="course_details" />
               </div>
@@ -41,7 +55,11 @@
                 <AvCourses :name="course_name" :details="course_details" />
               </div>
             </div>
-            <div class="row justify-content-center align-items-center pt-5">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              class="row justify-content-center align-items-center pt-5"
+            >
               <div class="col-lg-5 col-md-6 col-12">
                 <AvCourses :name="course_name" :details="course_details" />
               </div>
@@ -50,11 +68,21 @@
               </div>
             </div>
           </div>
-          <div class="col-12 text-center mt-5">
-            <button @click="showFunction" class="Showbtn">See More</button>
+          <div class="text-center mt-5">
+            <button
+              @click="showFunction('.Hide', '.Showbtn', '.Hidebtn')"
+              class="Showbtn"
+            >
+              See More
+            </button>
           </div>
-          <div class="col-12 text-center mt-5">
-            <button @click="hideFunction" class="Hidebtn">See Less</button>
+          <div class="text-center mt-5">
+            <button
+              @click="hideFunction('.Hide', '.Showbtn', '.Hidebtn')"
+              class="Hidebtn"
+            >
+              See Less
+            </button>
           </div>
         </div>
       </div>
@@ -63,8 +91,8 @@
 </template>
 
 <script>
-import $ from "jquery";
 import AvCourses from "./AvailableCourses/AvCourses.vue";
+import show_btn from "../../../mixin/show_btn.vue";
 export default {
   name: "CoursesComponent",
   components: { AvCourses },
@@ -75,25 +103,13 @@ export default {
         "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus, iaculis lorem vitae, cursus velit.",
     };
   },
-  methods: {
-    showFunction() {
-      $(".Hide").fadeIn();
-      $(".Showbtn").hide();
-      $(".Hidebtn").show();
-    },
-    hideFunction() {
-      $(".Hide").fadeOut();
-      $(".Showbtn").show();
-      $(".Hidebtn").hide();
-    },
-  },
+  mixins: [show_btn],
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../../components/global/scss/main.scss";
 .courses {
-  margin-bottom: 30px;
   .courses-img {
     background-image: url("../../assets/Group281.svg");
     width: 100%;
@@ -106,8 +122,9 @@ export default {
     }
     h2 {
       font-weight: bold;
-      font-size: 45px;
+      font-size: 40px;
       letter-spacing: 1px;
+      font-family: "Poppins", sans-serif;
       @include breakpoints(mobile) {
         font-size: 35px;
       }
@@ -142,6 +159,10 @@ export default {
         box-shadow: 0px 3px 6px #292341;
         border-radius: 18px;
         opacity: 1;
+        transition: all 0.3s;
+        &:hover {
+          transform: translateY(-6px);
+        }
       }
     }
     .Hidebtn {

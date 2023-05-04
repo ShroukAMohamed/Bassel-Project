@@ -1,62 +1,73 @@
 <template>
   <div class="Courses">
-    <div class="gray-img d-flex align-items-center overflow-hidden">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-8 col-12">
-            <div class="course-details">
-              <div
-                class="course-img overflow-hidden d-flex flex-column justify-content-center"
-              >
-                <div class="overlay"></div>
+    <section id="CourseContent">
+      <div
+        class="gray-img d-flex align-items-sm-center pt-5 pt-sm-0 overflow-hidden"
+      >
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 col-12">
+              <div class="course-details">
                 <div
-                  class="position-relative h-100 d-flex justify-content-center flex-column"
+                  class="course-img overflow-hidden d-flex flex-column justify-content-center"
                 >
-                  <div class="row justify-content-between">
-                    <div
-                      class="enroll col-6 col-md-5 d-flex flex-column flex-sm-row justify-content-center align-items-center pe-0 ps-0"
-                    >
-                      <div class="d-inline">
-                        <span class="me-sm-1">
-                          <i class="fa-solid fa-star"></i
-                        ></span>
-                        <span class="me-sm-1">
-                          <i class="fa-solid fa-star"></i
-                        ></span>
-                        <span class="me-sm-1">
-                          <i class="fa-solid fa-star"></i
-                        ></span>
-                        <span class="me-sm-1">
-                          <i class="fa-solid fa-star"></i
-                        ></span>
-                      </div>
-                      <span class="ms-sm-2">(100) enrollment</span>
-                    </div>
-                    <div
-                      class="promo-code col-5 col-xl-3 col-md-4 d-flex flex-column justify-content-center align-items-center"
-                    >
-                      <span>#Promo Code:</span>
-                      <span>WEDDEV</span>
-                    </div>
-                  </div>
+                  <div class="overlay"></div>
                   <div
-                    class="d-flex flex-column text-light justify-content-center align-items-center mt-sm-5 h-100"
+                    class="position-relative h-100 d-flex justify-content-center flex-column"
                   >
-                    <h3 class="text-center">Course Name Goes Here</h3>
-                    <div class="text-style">
-                      <p>
-                        Mauris imperdiet orci dapibus, commodo libero nec,
-                        interdum tortor. Morbi in nibh faucibus, iaculis lorem
-                        Mauris imperdiet orci dapibus, commodo libero nec,
-                        interdum tortor. Morbi in nibh faucibus, iaculis lorem
-                      </p>
-                    </div>
-                    <div class="options d-flex justify-content-around w-100">
-                      <span
-                        ><i class="fa-solid fa-laptop-code"></i> 4 Tracks</span
+                    <div class="row justify-content-between">
+                      <div
+                        class="enroll col-6 col-md-5 d-flex flex-column flex-sm-row justify-content-center align-items-center pe-0 ps-0"
                       >
-                      <span><i class="fa-solid fa-users"></i> 2 Group</span>
-                      <span><i class="fa-solid fa-download"></i> Download</span>
+                        <div class="d-inline">
+                          <span class="me-sm-1">
+                            <i class="fa-solid fa-star"></i
+                          ></span>
+                          <span class="me-sm-1">
+                            <i class="fa-solid fa-star"></i
+                          ></span>
+                          <span class="me-sm-1">
+                            <i class="fa-solid fa-star"></i
+                          ></span>
+                          <span class="me-sm-1">
+                            <i class="fa-solid fa-star"></i
+                          ></span>
+                        </div>
+                        <span class="ms-sm-2"
+                          >({{ N_Enrollment }}) Enrollment</span
+                        >
+                      </div>
+                      <div
+                        class="promo-code col-5 col-xl-3 col-md-4 d-flex flex-column justify-content-center align-items-center"
+                      >
+                        <span>#Promo Code:</span>
+                        <span>{{ PromoCode }}</span>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex flex-column text-light justify-content-center align-items-center mt-sm-5 h-100"
+                    >
+                      <h3 class="text-center">{{ name }}</h3>
+                      <div class="text-style">
+                        <p>
+                          {{ courseDetails }}
+                        </p>
+                      </div>
+                      <div
+                        class="options d-flex justify-content-around justify-content-sm-center w-100"
+                      >
+                        <span class="me-sm-5"
+                          ><i class="fa-solid fa-laptop-code"></i>
+                          {{ N_Tracks }} Tracks</span
+                        >
+                        <span
+                          ><i class="fa-solid fa-users"></i>
+                          {{ N_Groups }} Groups</span
+                        >
+                        <span class="ms-sm-5"
+                          ><i class="fa-solid fa-download"></i> Download</span
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -65,7 +76,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <section class="course-info pb-5">
       <div class="container">
         <div class="row text-center">
@@ -76,17 +87,73 @@
         </div>
         <div class="bg-card">
           <p class="ms-5 pt-5 Groups-text">
-            <i class="fa-solid fa-users"></i> 3 Groups:
+            <i class="fa-solid fa-users"></i> {{ N_Groups }} Groups:
           </p>
           <div class="row justify-content-center">
-            <GroupCard />
-            <GroupCard />
+            <GroupCard
+              :GroupTitle="GroupTitle"
+              :GroupState="GroupState"
+              :From_Date="From_Date"
+              :To_Date="To_Date"
+              :Duration="Duration"
+              :GroupDayTimeData="GroupDayTimeData"
+              :GroupLocation="GroupLocation"
+              :GroupCapacity="GroupCapacity"
+              :N_Available="N_Available"
+              :Track_Title="Track_Title"
+              :trackDetails="trackDetails"
+              :N_Topics="N_Topics"
+              :Topic="Topic"
+            />
+            <GroupCard
+              :GroupTitle="GroupTitle"
+              :GroupState="GroupState"
+              :From_Date="From_Date"
+              :To_Date="To_Date"
+              :Duration="Duration"
+              :GroupDayTimeData="GroupDayTimeDataTo"
+              :GroupLocation="GroupLocation"
+              :GroupCapacity="GroupCapacity"
+              :N_Available="N_Available"
+              :Track_Title="Track_Title"
+              :trackDetails="trackDetails"
+              :N_Topics="N_Topics"
+              :Topic="Topic"
+            />
           </div>
 
           <div class="Hide">
             <div class="row justify-content-center mt-3">
-              <GroupCard />
-              <GroupCard />
+              <GroupCard
+                :GroupTitle="GroupTitle"
+                :GroupState="GroupState"
+                :From_Date="From_Date"
+                :To_Date="To_Date"
+                :Duration="Duration"
+                :GroupDayTimeData="GroupDayTimeData"
+                :GroupLocation="GroupLocation"
+                :GroupCapacity="GroupCapacity"
+                :N_Available="N_Available"
+                :Track_Title="Track_Title"
+                :trackDetails="trackDetails"
+                :N_Topics="N_Topics"
+                :Topic="Topic"
+              />
+              <GroupCard
+                :GroupTitle="GroupTitle"
+                :GroupState="GroupState"
+                :From_Date="From_Date"
+                :To_Date="To_Date"
+                :Duration="Duration"
+                :GroupDayTimeData="GroupDayTimeData"
+                :GroupLocation="GroupLocation"
+                :GroupCapacity="GroupCapacity"
+                :N_Available="N_Available"
+                :Track_Title="Track_Title"
+                :trackDetails="trackDetails"
+                :N_Topics="N_Topics"
+                :Topic="Topic"
+              />
             </div>
           </div>
 
@@ -107,8 +174,59 @@
 import $ from "jquery";
 import FooterA from "../components/global/Footer.vue";
 import GroupCard from "../components/CourseContent/GroupCard.vue";
+import Vue from "vue";
+Vue.mixin({
+  mounted() {
+    $(".Navbar a").removeClass("Active");
+  },
+});
 export default {
   name: "CourseContent",
+  data() {
+    return {
+      N_Enrollment: "100",
+      PromoCode: "WEDDEV",
+      name: "Course Name Goes Here",
+      courseDetails:
+        "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus, iaculis lorem vitae, cursus velit Mauris imperdiet orci dapibus, commodo libero nec, interdum.",
+      N_Tracks: "4",
+      N_Groups: "3",
+      GroupTitle: "GroupTitle",
+      GroupState: "Offline",
+      From_Date: "01/30",
+      To_Date: "10/30",
+      Duration: "10 Days",
+      GroupDayTimeData: [
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+      ],
+      GroupDayTimeDataTo: [
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+        { GroupTime: "12:1 pm", GroupDay: "Mon" },
+      ],
+      GroupLocation: "Armenia, Cape Town",
+      GroupCapacity: "100",
+      N_Available: "40",
+      Track_Title: "Track Title",
+      trackDetails:
+        "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh",
+      N_Topics: "12",
+      Topic: [
+        "1. Lorem ipsum dolo",
+        "1. Lorem ipsum dolo",
+        "1. Lorem ipsum dolo",
+        "1. Lorem ipsum dolo",
+        "1. Lorem ipsum dolo",
+        "1. Lorem ipsum dolo",
+        "1. Lorem ipsum dolo",
+      ],
+    };
+  },
   components: { FooterA, GroupCard },
   methods: {
     showFunction() {
@@ -128,7 +246,7 @@ export default {
 <style lang="scss" scoped>
 @import "../components/global/scss/main.scss";
 .Courses {
-  margin-top: 50px;
+  margin-top: 70px;
   .gray-img {
     background-image: url("../assets/Rectangle\ 485.svg");
     height: 80vh;
@@ -212,6 +330,9 @@ export default {
               font-size: 14px;
             }
           }
+          span:last-of-type {
+            cursor: pointer;
+          }
         }
       }
     }
@@ -246,6 +367,10 @@ export default {
         max-width: 200px;
         padding: 10px 0;
         border-radius: 22px;
+        transition: all 0.3s;
+        &:hover {
+          transform: translateY(-4px);
+        }
       }
       .Groups-text {
         font-size: 18px;

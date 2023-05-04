@@ -4,8 +4,8 @@
     <div class="line"></div>
     <div class="d-flex justify-content-between align-items-center pt-3 pb-3">
       <div>
-        <p>Course Name</p>
-        <p><span>20/50</span> sessions</p>
+        <p>Project Name</p>
+        <p><span>20/50</span> Milestones</p>
         <span>60% completed</span>
       </div>
       <img class="img-fluid" src="../../assets/wavy-line.png" alt="" />
@@ -13,8 +13,8 @@
     <div class="line"></div>
     <div class="d-flex justify-content-between align-items-center pt-3">
       <div>
-        <p>Course Name</p>
-        <p><span>20/50</span> sessions</p>
+        <p>Project Name</p>
+        <p><span>20/50</span> Milestones</p>
         <span>60% completed</span>
       </div>
       <img class="img-fluid" src="../../assets/wavy-line2.png" alt="" />
@@ -33,7 +33,8 @@ export default {
   max-width: 360px;
   padding: 20px 30px;
   h3 {
-    font-size: 23px;
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
   }
   img {
     width: 30%;

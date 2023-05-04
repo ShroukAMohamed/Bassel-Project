@@ -56,6 +56,12 @@ export default {
     background-color: #6864b9;
     box-shadow: 0px 3px 6px #6864b969;
     color: white;
+    transition: all 0.3s;
+    &:hover {
+      color: #6864b9;
+      background-color: white;
+      transform: scale(1.1);
+    }
   }
   .line {
     border-bottom: 1px solid #acacada6;

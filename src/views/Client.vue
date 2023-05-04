@@ -8,7 +8,11 @@
       <div class="container">
         <div class="Container-div">
           <div class="row pt-5">
-            <div class="col-lg-6 first-part">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              class="col-lg-6 first-part"
+            >
               <div class="row justify-content-center">
                 <div
                   class="col-md-5 text-center text-md-start d-flex flex-column justify-content-center"
@@ -45,7 +49,11 @@
               </div>
               <!-- <Calendar /> -->
             </div>
-            <div class="col-lg-6 gy-5 gy-lg-0">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              class="col-lg-6 gy-5 gy-lg-0"
+            >
               <div class="blue-Card ps-md-4 pe-md-4 ps-2 pe-2">
                 <div
                   class="d-flex flex-column align-items-center flex-xl-row pb-3 justify-content-xl-between courses-board"
@@ -55,7 +63,6 @@
                   </h3>
                   <div class="mt-4 mt-xl-0">
                     <input type="text" placeholder="Search" />
-                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
                   </div>
                 </div>
                 <ClientProject />
@@ -134,6 +141,8 @@ export default {
         > div:first-child {
           h3 {
             position: relative;
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
             &::before {
               content: "";
               position: absolute;
@@ -149,6 +158,7 @@ export default {
             width: 100%;
             max-width: 150px;
             letter-spacing: 0.5px;
+            font-family: "Asap", sans-serif;
           }
         }
       }
@@ -185,6 +195,8 @@ export default {
         h3 {
           font-weight: 600;
           font-size: 26px;
+          font-family: "Poppins", sans-serif;
+          font-size: 25px;
           span {
             background-color: white;
             color: #2596be;
@@ -196,13 +208,12 @@ export default {
         }
         div {
           background-color: white;
-          display: flex;
-          align-items: center;
           padding: 6px 20px;
           border-radius: 25px;
           width: 100%;
           max-width: 250px;
           input {
+            width: 100%;
             border: 0;
             &:focus {
               outline: none;

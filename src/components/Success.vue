@@ -26,13 +26,13 @@
                 You Applied Successfully to the Coures You Will Have a valuable
                 Learning Time
               </p>
-              <!-- <router-link
-                to="/"
-                @click="hideModal('#thirdModal')"
+              <button
                 class="btn btn-primary w-50 rounded-5 pt-2 pb-2 mb-5"
+                data-bs-dismiss="modal"
+                @click="hideModal('#thirdModal')"
               >
-                Back To Home
-              </router-link> -->
+                <router-link to="/" class=""> Back To Home </router-link>
+              </button>
             </div>
           </div>
         </div>
@@ -60,6 +60,12 @@ export default {
       margin: auto;
       letter-spacing: 1px;
       padding: 40px 0;
+    }
+    button {
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
   }
 }

@@ -1,13 +1,17 @@
 <template>
   <div>
-    <section class="Services">
+    <section class="Services block" id="Services">
       <div class="service-img">
         <div class="container">
           <div class="row">
             <div class="col-12 Service-info">
               <h2 class="text-center">SERVICES & NUMBERS</h2>
             </div>
-            <div class="col-md-4 col-12 text-center">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="col-md-4 col-12 text-center"
+            >
               <div class="Card">
                 <div class="pt-4">
                   <img class="pb-4" src="../../assets/MaskGroup2.svg" alt="" />
@@ -20,7 +24,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-12 gy-5 gy-md-0 text-center">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="col-md-4 col-12 gy-5 gy-md-0 text-center"
+            >
               <div class="Card">
                 <div class="pt-4">
                   <img class="pb-4" src="../../assets/MaskGroup2.svg" alt="" />
@@ -33,7 +41,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-12 gy-5 gy-md-0 text-center">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="col-md-4 col-12 gy-5 gy-md-0 text-center"
+            >
               <div class="Card">
                 <div class="pt-4">
                   <img class="pb-4" src="../../assets/MaskGroup3.svg" alt="" />
@@ -48,7 +60,11 @@
             </div>
           </div>
           <div class="row justify-content-center serviceNum">
-            <div class="col-lg-3 col-md-6 col-12 gy-4 text-center">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="600"
+              class="col-lg-3 col-md-6 col-12 gy-4 text-center"
+            >
               <div
                 class="circle circle-1 d-flex justify-content-center align-items-center"
               >
@@ -56,7 +72,12 @@
               </div>
               <p class="pt-3">Successful Projects</p>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 gy-4 text-center">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="600"
+              data-aos-delay="200"
+              class="col-lg-3 col-md-6 col-12 pt-5 pt-lg-0 gy-4 text-center"
+            >
               <div
                 class="circle circle-2 d-flex justify-content-center align-items-center"
               >
@@ -64,7 +85,12 @@
               </div>
               <p class="pt-3">Cup Of Coffee</p>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 text-center pt-5 gy-4 pt-lg-0">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="600"
+              data-aos-delay="400"
+              class="col-lg-3 col-md-6 col-12 text-center pt-5 gy-4 pt-lg-0"
+            >
               <div
                 class="circle circle-3 d-flex justify-content-center align-items-center"
               >
@@ -72,7 +98,12 @@
               </div>
               <p class="pt-3">Students</p>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 text-center pt-5 gy-4 pt-lg-0">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="600"
+              data-aos-delay="600"
+              class="col-lg-3 col-md-6 col-12 text-center pt-5 gy-4 pt-lg-0"
+            >
               <div
                 class="circle circle-4 d-flex justify-content-center align-items-center"
               >
@@ -111,6 +142,7 @@ export default {
         font-size: 40px;
         font-weight: bold;
         letter-spacing: 1px;
+        font-family: "Poppins", sans-serif;
         @include breakpoints(mobile) {
           font-size: 35px;
         }

@@ -5,7 +5,22 @@
   </div>
 </template>
 
+<style lang="scss">
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Poppins:wght@600&display=swap");
+</style>
+
 <script>
+import Vue from "vue";
+Vue.mixin({
+  mounted() {
+    window.scrollTo(0, 0);
+  },
+});
 import NavBar from "@/components/global/Navbar.vue";
 export default {
   components: { NavBar },

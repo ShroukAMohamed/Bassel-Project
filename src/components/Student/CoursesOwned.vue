@@ -11,43 +11,51 @@
       src="../../assets/mr-bochelly-IBKyH0V3rew-unsplash_copy.png"
       alt=""
     />
-    <div class="p-4 pt-2">
-      <div class="d-flex align-items-center">
+    <div class="pt-2 pb-3">
+      <div class="d-flex align-items-center ps-4 pe-3">
         <div>
-          <p>Course Title here</p>
-          <p><span>20/50</span> sessions</p>
-          <p>60 % completed</p>
+          <p>{{ Course_Name }}</p>
+          <p>
+            <span>{{ Session_Num }}</span> sessions
+          </p>
+          <p>{{ Completion }} completed</p>
         </div>
-        <img class="img-fluid" src="../../assets/wavy-line.png" alt="" />
+        <img class="img-fluid ms-3" src="../../assets/wavy-line.png" alt="" />
       </div>
       <div class="line"></div>
-      <div class="d-flex justify-content-between mt-2">
-        <p>Track Info</p>
-        <span><i class="fa-solid fa-laptop-code"></i></span>
-      </div>
-      <p>Mauris imperdiet orci dapibus, commodo libero nec, interdum</p>
-      <div class="d-flex justify-content-between">
-        <p>Group</p>
-        <span><i class="fa-solid fa-users"></i></span>
-      </div>
-      <p class="fw-semibold">Offline</p>
-      <div class="d-flex flex-column flex-sm-row">
-        <div>
-          <span>From:</span>
-          <span>01/30</span>
+      <div class="TrackDetails ps-4 pe-4">
+        <div class="d-flex justify-content-between mt-2">
+          <p>{{ TrackInfo }}</p>
+          <span><i class="fa-solid fa-laptop-code"></i></span>
+        </div>
+        <p>{{ TrackDetails }}</p>
+        <div class="d-flex justify-content-between">
+          <p>{{ Group }}</p>
+          <span><i class="fa-solid fa-users"></i></span>
+        </div>
+        <p class="fw-semibold">{{ GroupStatus }}</p>
+        <div class="d-flex flex-column flex-sm-row">
+          <div>
+            <span>From:</span>
+            <span>{{ FromDate }}</span>
+          </div>
+          <div>
+            <span>To:</span>
+            <span>{{ ToDate }}</span>
+          </div>
+          <div>
+            <span>Duration:</span>
+            <span>{{ Duration }}</span>
+          </div>
         </div>
         <div>
-          <span>To:</span>
-          <span>10/30</span>
+          <p>
+            Location: <span>{{ CourseLocation }}</span>
+          </p>
+          <p>
+            Max Capacity: <span>{{ MaxCapacity }}</span>
+          </p>
         </div>
-        <div>
-          <span>Duration:</span>
-          <span>10 Days</span>
-        </div>
-      </div>
-      <div>
-        <p>Location: <span>Armenia, Cape Town</span></p>
-        <p>Max Capacity: <span>100 enrollment</span></p>
       </div>
     </div>
   </div>
@@ -56,6 +64,20 @@
 <script>
 export default {
   name: "CoursesOwned",
+  props: [
+    "Course_Name",
+    "Session_Num",
+    "Completion",
+    "TrackInfo",
+    "TrackDetails",
+    "Group",
+    "GroupStatus",
+    "FromDate",
+    "ToDate",
+    "Duration",
+    "CourseLocation",
+    "MaxCapacity",
+  ],
 };
 </script>
 
@@ -113,50 +135,55 @@ export default {
         height: 35%;
       }
     }
-    div:nth-child(3),
-    div:nth-child(5) {
-      p {
-        font-weight: 600;
-        font-size: 18px;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
-      }
-      + p {
-        color: gray;
-        font-size: 16px;
-        letter-spacing: 1px;
-        width: 100%;
-        max-width: 300px;
-      }
-      span {
-        color: #515661;
-        font-size: 20px;
-      }
+    .line {
+      border-bottom: 1px solid rgb(206, 205, 205);
     }
-    div:nth-child(7) {
-      div {
-        margin-right: 15px;
-        margin-bottom: 10px;
+    .TrackDetails {
+      div:nth-of-type(1),
+      div:nth-of-type(2) {
+        p {
+          font-weight: 600;
+          font-size: 18px;
+          letter-spacing: 1px;
+          margin-bottom: 5px;
+        }
+        + p {
+          color: gray;
+          font-size: 16px;
+          letter-spacing: 1px;
+          width: 100%;
+          max-width: 300px;
+        }
         span {
+          color: #515661;
+          font-size: 20px;
+        }
+      }
+      div:nth-of-type(3) {
+        div {
+          margin-right: 15px;
+          margin-bottom: 10px;
+          span {
+            color: #515661;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            word-break: break-all;
+          }
+          span:last-of-type {
+            font-weight: 500;
+          }
+        }
+      }
+      div:last-of-type {
+        p {
           color: #515661;
           font-size: 16px;
           font-weight: 300;
           letter-spacing: 1px;
-          word-break: break-all;
-        }
-        span:last-of-type {
-          font-weight: 500;
-        }
-      }
-    }
-    div:last-child {
-      p {
-        color: #515661;
-        font-size: 16px;
-        font-weight: 300;
-        letter-spacing: 1px;
-        span {
-          font-weight: 500;
+          span {
+            font-weight: 500;
+          }
         }
       }
     }

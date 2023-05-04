@@ -1,11 +1,15 @@
 <template>
   <div>
-    <section class="contact-form">
+    <section id="Contact" class="contact-form block">
       <div class="contact-img d-flex align-items-center">
         <div class="container">
           <div class="row justify-content-center pt-4 pb-4">
             <div class="col-12">
-              <div class="form-card pt-4 pb-5 ps-3 pe-3">
+              <div
+                data-aos="fade-in"
+                data-aos-duration="1000"
+                class="form-card pt-4 pb-5 ps-3 pe-3"
+              >
                 <h2 class="text-center">
                   Our Dear Customer, Feel Free To Contact With Us
                 </h2>
@@ -34,7 +38,7 @@
                       cols="30"
                       rows="4"
                     ></textarea>
-                    <button class="border-0">Submit</button>
+                    <input class="border-0" type="submit" />
                   </div>
                 </form>
               </div>
@@ -93,7 +97,7 @@ export default {
         padding-bottom: 20px;
         padding-top: 20px;
         letter-spacing: 1px;
-        font-weight: 600;
+        font-family: "Poppins", sans-serif;
       }
       input {
         @extend %inputForm;
@@ -133,7 +137,7 @@ export default {
         }
       }
 
-      button {
+      input[type="submit"] {
         width: 100%;
         max-width: 200px;
         margin: auto;
@@ -144,6 +148,10 @@ export default {
         color: white;
         letter-spacing: 1px;
         background-color: #292341;
+        transition: all 0.3s;
+        &:hover {
+          transform: translateY(-5px);
+        }
       }
     }
   }

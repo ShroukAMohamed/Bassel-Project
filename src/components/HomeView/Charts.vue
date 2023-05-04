@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <section class="charts overflow-hidden">
     <div class="container">
       <div class="row align-items-center justify-content-center mt-4">
@@ -409,4 +409,4 @@ export default {
     }
   }
 }
-</style>
+</style> -->

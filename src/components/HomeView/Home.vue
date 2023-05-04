@@ -50,33 +50,42 @@
       </div>
     </transition>
 
-    <div class="container h-100">
-      <div class="row align-items-center justify-content-center h-100">
-        <div class="col-md-6 d-flex d-lg-block flex-column align-items-center">
-          <div class="d-flex flex-column flex-sm-row align-items-center">
-            <div class="bassel-img d-none d-md-block"></div>
-            <h2 class="ps-md-2 fw-bold">BASSEL ALLAM</h2>
-          </div>
-          <p class="ps-md-2 pt-3 text-center text-md-start">
-            Vivamus eget aliquam dui. Integer eu arcu vel
-          </p>
+    <section class="h-100 block" id="Home">
+      <div class="container h-100">
+        <div class="row align-items-center justify-content-center h-100">
           <div
-            class="mt-5 d-flex flex-column w-100 align-items-center align-items-md-start"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+            class="col-md-6 d-flex d-lg-block flex-column align-items-center"
           >
-            <button @click="showModal = true">Login As A Student</button>
-
-            <router-link class="mt-4 client" to="/Client"
-              >Login As Client</router-link
+            <div class="d-flex flex-column flex-sm-row align-items-center">
+              <div class="bassel-img d-none d-md-block"></div>
+              <h2 class="ps-md-2 fw-bold">BASSEL ALLAM</h2>
+            </div>
+            <p class="ps-md-2 pt-3 text-center text-md-start">
+              Vivamus eget aliquam dui. Integer eu arcu vel
+            </p>
+            <div
+              class="mt-5 d-flex flex-column w-100 align-items-center align-items-md-start"
             >
+              <button @click="showModal = true">Login As A Student</button>
+
+              <router-link class="mt-4 client" to="/Client"
+                >Login As Client</router-link
+              >
+            </div>
           </div>
-        </div>
-        <div
-          class="col-md-6 order-md-last order-first d-flex justify-content-center"
-        >
-          <img class="img-fluid" src="../../assets/Logo-Png.png" alt="" />
+          <div
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            class="col-md-6 order-md-last order-first d-flex justify-content-center gy-5 gy-sm-0"
+          >
+            <img class="img-fluid" src="../../assets/Logo-Png.png" alt="" />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -107,7 +116,6 @@ export default {
   background-position: 100% 100%;
   @include breakpoints(mobile) {
     height: 100%;
-    margin-top: 74px;
     padding-bottom: 30px;
   }
 

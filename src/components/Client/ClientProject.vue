@@ -1,6 +1,6 @@
 <template>
   <div class="Card">
-    <div class="p-4">
+    <div class="p-sm-4 p-3">
       <div class="d-flex justify-content-between">
         <p class="mb-0">
           Project Name - <span>{{ ProjectName }}</span>

@@ -1,68 +1,57 @@
 <template>
   <div class="col-xl-5 col-12">
     <div class="Card pt-4 pb-4 ps-sm-4 pe-sm-4 mt-3 mb-2">
-      <h4><i class="fa-solid fa-users"></i> Group Title</h4>
-      <span class="">Offline</span>
+      <h4><i class="fa-solid fa-users"></i> {{ GroupTitle }}</h4>
+      <span class="">{{ GroupState }}</span>
       <div class="dates">
-        <span>From: <span>01/30</span></span>
-        <span>To: <span>10/30</span></span>
-        <span>Duration: <span>10 Days</span></span>
+        <span
+          >From: <span>{{ From_Date }}</span></span
+        >
+        <span
+          >To: <span>{{ To_Date }}</span></span
+        >
+        <span
+          >Duration: <span>{{ Duration }}</span></span
+        >
       </div>
       <p class="attendance">Days of Attendance: per week</p>
       <div class="d-flex justify-content-between Time">
-        <div class="d-flex flex-column align-items-center">
-          <span>Mon</span> <span>12:1 pm</span>
-        </div>
-
-        <div class="d-flex flex-column align-items-center">
-          <span>Teus</span> <span>12:1 pm</span>
-        </div>
-
-        <div class="d-flex flex-column align-items-center">
-          <span>Mon</span> <span>12:1 pm</span>
-        </div>
-
-        <div class="d-flex flex-column align-items-center">
-          <span>Teus</span> <span>12:1 pm</span>
-        </div>
-
-        <div class="d-flex flex-column align-items-center">
-          <span>Teus</span> <span>12:1 pm</span>
+        <div
+          class="d-flex flex-column align-items-center"
+          v-for="(i, index) in GroupDayTimeData"
+          :key="index"
+        >
+          <span>{{ i["GroupDay"] }}</span> <span>{{ i["GroupTime"] }}</span>
         </div>
       </div>
       <div class="location">
-        <p>Location: <span>Armenia, Cape Town</span></p>
         <p>
-          Max Capacity: <span>100 enrollment</span>
-          <span>40 Available</span>
+          Location: <span>{{ GroupLocation }}</span>
+        </p>
+        <p>
+          Max Capacity: <span>{{ GroupCapacity }} enrollment</span>
+          <span class="ms-4">{{ N_Available }} Available</span>
         </p>
       </div>
       <div class="line-2"></div>
       <div class="line-3">
         <div class="track-title">
-          <p><i class="fa-solid fa-laptop-code"></i> Track Title</p>
+          <p><i class="fa-solid fa-laptop-code"></i> {{ Track_Title }}</p>
           <p>
-            Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor.
-            Morbi in nibh
+            {{ trackDetails }}
           </p>
         </div>
         <div class="track-topics">
-          <p class="text-center">12 Track Topics</p>
-          <p>1. Lorem, ipsum dolor.</p>
-          <p>1. Lorem, ipsum dolor.</p>
-          <p>1. Lorem, ipsum dolor.</p>
-          <p>1. Lorem, ipsum dolor.</p>
-          <p>1. Lorem, ipsum dolor.</p>
-          <p>1. Lorem, ipsum dolor.</p>
-          <p>1. Lorem, ipsum dolor.</p>
-          <p>1. Lorem, ipsum dolor.</p>
+          <p class="text-center">{{ N_Topics }} Track Topics</p>
+          <div v-for="(i, index) in Topic" :key="index">
+            <p>{{ i }}</p>
+          </div>
         </div>
       </div>
       <div class="line-4">
-        <p><i class="fa-solid fa-laptop-code"></i> Track Title</p>
+        <p><i class="fa-solid fa-laptop-code"></i> {{ Track_Title }}</p>
         <p>
-          Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor.
-          Morbi in nibh
+          {{ trackDetails }}
         </p>
       </div>
       <div class="d-flex justify-content-center">
@@ -75,6 +64,21 @@
 <script>
 export default {
   name: "GroupCard",
+  props: [
+    "GroupTitle",
+    "GroupState",
+    "From_Date",
+    "To_Date",
+    "Duration",
+    "GroupDayTimeData",
+    "GroupLocation",
+    "GroupCapacity",
+    "N_Available",
+    "Track_Title",
+    "trackDetails",
+    "N_Topics",
+    "Topic",
+  ],
 };
 </script>
 
@@ -220,15 +224,13 @@ export default {
       width: 95%;
       margin: auto;
       overflow: auto;
-      p {
-        color: #515661;
-      }
-      p:first-child {
-        font-weight: 300;
-      }
-      p:not(:first-child) {
-        margin: 8px 0;
-        text-align: center;
+      div {
+        p {
+          color: #515661;
+          margin: 8px 0;
+          text-align: center;
+          font-weight: 300;
+        }
       }
     }
   }
@@ -274,6 +276,10 @@ export default {
     color: white;
     text-decoration: none;
     text-align: center;
+    transition: all 0.3s;
+    &:hover {
+      transform: translateY(-4px);
+    }
   }
 }
 </style>

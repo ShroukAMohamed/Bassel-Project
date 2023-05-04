@@ -35,8 +35,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../global/scss/main.scss";
 .Recommend {
   position: relative;
+  background-color: #dbddf780;
+  padding: 20px;
+  margin-top: 20px;
+  @include breakpoints(mobile) {
+    padding: 20px 10px;
+  }
   &::after {
     content: "1000 EGP";
     position: absolute;
@@ -53,6 +60,7 @@ export default {
     font-weight: bold;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
   }
+
   .star-icon {
     span {
       color: #ffb12b !important;

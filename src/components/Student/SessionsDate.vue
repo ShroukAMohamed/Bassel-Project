@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between align-items-center">
     <div class="d-flex flex-column">
       <span>{{ Course_Title }}</span>
       <span class="mt-1 mb-1"
@@ -8,7 +8,7 @@
       <span>{{ Session_Date }}</span>
     </div>
     <img
-      class="img-fluid w-25 h-25"
+      class="img-fluid"
       src="../../assets/mr-bochelly-IBKyH0V3rew-unsplash@2x.png"
       alt=""
     />
@@ -23,6 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../global/scss/main.scss";
 div {
   span:first-of-type {
     color: #515661;
@@ -36,6 +37,14 @@ div {
   span:nth-of-type(3) {
     font-weight: bold;
     font-size: 15px;
+  }
+  img {
+    width: 25%;
+    height: 25%;
+    @include breakpoints(mobile) {
+      width: 35%;
+      height: 35%;
+    }
   }
 }
 </style>

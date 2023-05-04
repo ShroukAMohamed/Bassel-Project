@@ -162,6 +162,10 @@ export default {
       width: 100%;
       max-width: 250px;
       padding: 8px 0;
+      transition: all 0.4s;
+      &:hover {
+        transform: translateY(-3px);
+      }
     }
   }
 }

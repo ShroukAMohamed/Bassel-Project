@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 text-center pb-3 pb-sm-5">
-          <h2>Course Name Goes Here</h2>
+          <h2>{{ CourseName }}</h2>
         </div>
         <div class="col-lg-6 col-12">
           <div class="course-details">
@@ -23,7 +23,7 @@
                     class="promo-code col-md-4 col-6 d-flex flex-column justify-content-center align-items-center"
                   >
                     <span class="ms-3">#Promo Code:</span>
-                    <span>WEDDEV</span>
+                    <span>{{ Promo_Code }}</span>
                   </div>
                 </div>
                 <div
@@ -31,17 +31,18 @@
                 >
                   <div class="text-style">
                     <p>
-                      Mauris imperdiet orci dapibus, commodo libero nec,
-                      interdum tortor. Morbi in nibh faucibus, iaculis lorem
-                      Mauris imperdiet orci dapibus, commodo libero nec,
-                      interdum tortor. Morbi in nibh faucibus, iaculis lorem
+                      {{ Course_Details }}
                     </p>
                   </div>
                   <div class="options">
                     <span
-                      ><i class="fa-solid fa-laptop-code"></i> 4 Tracks</span
+                      ><i class="fa-solid fa-laptop-code"></i>
+                      {{ N_Tracks }} Tracks</span
                     >
-                    <span><i class="fa-solid fa-users"></i> 2 Group</span>
+                    <span
+                      ><i class="fa-solid fa-users"></i>
+                      {{ N_Groups }} Group</span
+                    >
                   </div>
                 </div>
               </div>
@@ -50,25 +51,33 @@
         </div>
         <div class="col-lg-6 col-12">
           <div class="info-card pt-5 pt-sm-3">
-            <p>Group Title</p>
+            <p>{{ Group_Title }}</p>
             <div class="mb-3">
-              <p class="d-inline me-3">Offline</p>
+              <p class="d-inline me-3">{{ CourseState }}</p>
               <span
                 >Location:
-                <p class="d-inline">Armenia, Cape Town</p></span
+                <p class="d-inline">{{ CourseLocation }}</p></span
               >
             </div>
             <div class="details mb-3">
-              <span>From: <span>01/30</span></span>
-              <span>To: <span>10/30</span></span>
-              <span>Duration: <span>10 Days</span></span>
+              <span
+                >From: <span>{{ FromDate }}</span></span
+              >
+              <span
+                >To: <span>{{ ToDate }}</span></span
+              >
+              <span
+                >Duration: <span>{{ Duration }}</span></span
+              >
             </div>
             <div class="d-flex justify-content-between">
               <span
                 >Max Capacity:
-                <p class="d-inline">100 enrollment</p></span
+                <p class="d-inline">{{ Max_Capacity }} enrollment</p></span
               >
-              <p class="text-danger text-center fw-light mb-0">40 available</p>
+              <p class="text-danger text-center fw-light mb-0">
+                {{ N_Available }} available
+              </p>
             </div>
           </div>
           <enrollForm />
@@ -86,15 +95,33 @@ import VisaMethod from "../components/VisaMethod.vue";
 import enrollForm from "../components/Enroll/enrollForm.vue";
 export default {
   name: "EnrollPage",
+  data() {
+    return {
+      CourseName: "Course Name Goes Here",
+      Promo_Code: "WEDDEV",
+      Course_Details:
+        "Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus, iaculis lorem vitae, cursus velit Mauris imperdiet orci dapibus, commodo libero nec, interdum.",
+      N_Tracks: "4",
+      N_Groups: "2",
+      Group_Title: "Group Title",
+      CourseState: "Offline",
+      CourseLocation: "Armenia, Cape Town",
+      FromDate: "01/30",
+      ToDate: "10/30",
+      Duration: "10 Days",
+      Max_Capacity: "100",
+      N_Available: "40",
+    };
+  },
   components: { PaymentComponent, SuccessComponent, VisaMethod, enrollForm },
   mixins: [hide_model],
-  methods: {
-    // validCard() {
-    //   $("#number").formatCardNumber();
-    //   $("#expire").formatCardExpiry();
-    //   $("#cvv").formatCardCVC();
-    // },
-  },
+  // methods: {
+  //  validCard() {
+  //    $("#number").formatCardNumber();
+  //    $("#expire").formatCardExpiry();
+  //    $("#cvv").formatCardCVC();
+  //    },
+  // },
 };
 </script>
 

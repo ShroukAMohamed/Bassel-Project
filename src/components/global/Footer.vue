@@ -2,28 +2,28 @@
   <div class="footer">
     <div class="container h-100">
       <div class="row align-items-center justify-content-center pt-5">
-        <div class="col-lg-4 col-12 d-flex d-lg-block justify-content-center">
+        <div class="col-md-4 col-12 d-flex d-lg-block justify-content-center">
           <img src="../../assets/Full-Logo.png" alt="" />
         </div>
         <div
-          class="col-lg-4 col-12 text-center text-sm-start d-flex justify-content-center gy-5 gy-lg-0"
+          class="col-md-4 col-12 text-center text-md-start d-flex justify-content-center gy-5 gy-lg-0"
         >
-          <div>
+          <div class="d-flex flex-column">
             <p class="fw-bold">Quick Access</p>
-            <p>Home</p>
-            <p>Customer / Contact Us</p>
-            <p>Courses</p>
-            <p>Login</p>
+            <a href="/#Home">Home</a>
+            <a href="/#Contact">Customer / Contact Us</a>
+            <a href="/#Courses">Courses</a>
+            <a href="/#Home">Login</a>
           </div>
         </div>
         <div
-          class="col-lg-4 col-12 text-center text-sm-start d-flex justify-content-center gy-5 gy-lg-0"
+          class="col-md-4 col-12 text-center text-md-start d-flex justify-content-center gy-5 gy-lg-0"
         >
-          <div>
+          <div class="d-flex flex-column">
             <p class="fw-bold">Others</p>
-            <p>Privacy Policy</p>
-            <p>Terms of Conditions</p>
-            <p>About Us</p>
+            <a>Privacy Policy</a>
+            <a>Terms of Conditions</a>
+            <a href="/#About">About Us</a>
           </div>
         </div>
       </div>
@@ -50,13 +50,15 @@ export default {
   .copyright {
     letter-spacing: 1px;
   }
-  p:not(:first-of-type) {
+  a {
     font-weight: 400;
     transition: all 0.3s;
     cursor: pointer;
-    color: rgb(228, 228, 228);
+    margin: 5px 0;
+    color: rgb(235, 233, 233) !important;
+    text-decoration: none;
     &:hover {
-      color: white;
+      color: white !important;
     }
   }
   p:first-of-type {

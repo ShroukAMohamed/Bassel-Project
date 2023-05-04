@@ -6,7 +6,7 @@
       <div class="line"></div>
     </div>
     <CoursesComponent />
-    <ChartsComponent />
+    <!-- <ChartsComponent /> -->
     <div class="container">
       <div class="line"></div>
     </div>
@@ -34,7 +34,7 @@ import FooterA from "../components/global/Footer.vue";
 import HomeComponent from "../components/HomeView/Home";
 import ServicesComponent from "../components/HomeView/Services.vue";
 import CoursesComponent from "../components/HomeView/Courses.vue";
-import ChartsComponent from "../components/HomeView/Charts.vue";
+// import ChartsComponent from "../components/HomeView/Charts.vue";
 import ProjectsComponent from "../components/HomeView/Projects.vue";
 import JobsComponent from "../components/HomeView/Jobs.vue";
 import AboutComponent from "../components/HomeView/About.vue";
@@ -46,7 +46,7 @@ export default {
     HomeComponent,
     ServicesComponent,
     CoursesComponent,
-    ChartsComponent,
+    // ChartsComponent,
     ProjectsComponent,
     JobsComponent,
     AboutComponent,

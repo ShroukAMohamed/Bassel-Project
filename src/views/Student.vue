@@ -4,7 +4,11 @@
       <div class="container">
         <div class="Container-div">
           <div class="row pt-5">
-            <div class="col-lg-6 first-part">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              class="col-lg-6 first-part"
+            >
               <div class="row justify-content-center">
                 <div
                   class="col-md-6 col-10 d-flex flex-column justify-content-between"
@@ -36,7 +40,7 @@
               </div>
               <div class="Card m-auto me-md-0 mt-5">
                 <div
-                  class="d-flex justify-content-between align-items-center pb-2"
+                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center pb-2"
                 >
                   <h3>Coming Sessions</h3>
                   <div class="Arrows">
@@ -75,6 +79,13 @@
                       :Session_Date="Session_Date"
                     />
                   </div>
+                  <div class="session Hidden">
+                    <SessionsDate
+                      :Course_Title="Course_Title"
+                      :Track_Title="Track_Title"
+                      :Session_Date="Session_Date"
+                    />
+                  </div>
                 </div>
                 <!-- <p>Open more</p> -->
               </div>
@@ -87,24 +98,82 @@
                   :Num_Tracks="Num_Tracks"
                   :Num_Groups="Num_Groups"
                 />
-                <p class="mt-3">Open more</p>
+                <div class="HideRecommend">
+                  <Recommended
+                    :CourseNameR="CourseNameR"
+                    :DetailsR="DetailsR"
+                    :Num_Tracks="Num_Tracks"
+                    :Num_Groups="Num_Groups"
+                  />
+                  <Recommended
+                    :CourseNameR="CourseNameR"
+                    :DetailsR="DetailsR"
+                    :Num_Tracks="Num_Tracks"
+                    :Num_Groups="Num_Groups"
+                  />
+                </div>
+                <div class="mt-3">
+                  <a
+                    @click="
+                      showFunction('.HideRecommend', '.ShowRe', '.HideRe')
+                    "
+                    class="ShowRe"
+                    >Open more</a
+                  >
+                  <a
+                    @click="
+                      hideFunction('.HideRecommend', '.ShowRe', '.HideRe')
+                    "
+                    class="HideRe"
+                    >Open less</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="col-lg-6 gy-5 gy-lg-0">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              class="col-lg-6 gy-5 gy-lg-0"
+            >
               <div class="blue-Card p-1 pt-4 p-md-4">
                 <div
-                  class="d-flex flex-xl-row flex-column pb-1 align-items-center justify-content-xl-between courses-board"
+                  class="d-flex flex-xl-row flex-column pb-1 align-items-center justify-content-xl-between StudentCourses"
                 >
                   <h3>
                     Your Courses <span class="ms-1">{{ Courses_Owned }}</span>
                   </h3>
                   <div class="mt-4 mt-xl-0">
                     <input type="text" placeholder="Search" />
-                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
                   </div>
                 </div>
-                <CoursesOwned />
-                <CoursesOwned />
+                <CoursesOwned
+                  :Course_Name="Course_Name"
+                  :Session_Num="Session_Num"
+                  :Completion="Completion"
+                  :TrackInfo="TrackInfo"
+                  :TrackDetails="TrackDetails"
+                  :Group="Group"
+                  :GroupStatus="GroupStatus"
+                  :FromDate="FromDate"
+                  :ToDate="ToDate"
+                  :Duration="Duration"
+                  :CourseLocation="CourseLocation"
+                  :MaxCapacity="MaxCapacity"
+                />
+                <CoursesOwned
+                  :Course_Name="Course_Name"
+                  :Session_Num="Session_Num"
+                  :Completion="Completion"
+                  :TrackInfo="TrackInfo"
+                  :TrackDetails="TrackDetails"
+                  :Group="Group"
+                  :GroupStatus="GroupStatus"
+                  :FromDate="FromDate"
+                  :ToDate="ToDate"
+                  :Duration="Duration"
+                  :CourseLocation="CourseLocation"
+                  :MaxCapacity="MaxCapacity"
+                />
               </div>
             </div>
           </div>
@@ -133,6 +202,7 @@ import SessionsDate from "../components/Student/SessionsDate.vue";
 import AttendState from "../components/Student/Attendance.vue";
 import Recommended from "../components/Student/Recommend.vue";
 import $ from "jquery";
+import show_btn from "../../mixin/show_btn.vue";
 export default {
   name: "StudentDashboard",
   data() {
@@ -149,6 +219,15 @@ export default {
       Num_Tracks: "4 Tracks",
       Num_Groups: "2 Groups",
       Courses_Owned: "2",
+      TrackInfo: "TrackInfo",
+      TrackDetails: "TrackDetails",
+      Group: "Group",
+      GroupStatus: "GroupStatus",
+      FromDate: "FromDate",
+      ToDate: "ToDate",
+      Duration: "Duration",
+      CourseLocation: "CourseLocation",
+      MaxCapacity: "MaxCapacity",
       Full_Name: "Full Name",
       Email: "Email",
       PhoneـNumber: "Phone Number",
@@ -165,18 +244,19 @@ export default {
     AttendState,
     Recommended,
   },
+  mixins: [show_btn],
   mounted() {
     this.checkSlider();
   },
   methods: {
     checkSlider() {
-      if ($(".Sessions > div").eq(0).hasClass("Hidden")) {
+      if ($(".Sessions > div:first-child").hasClass("Hidden")) {
         $("span.Left").removeClass("Hide");
       } else {
         $("span.Left").addClass("Hide");
       }
 
-      if ($(".Sessions > div").eq(2).hasClass("Hidden")) {
+      if ($(".Sessions > div:last-child").hasClass("Hidden")) {
         $("span.Right").removeClass("Hide");
       } else {
         $("span.Right").addClass("Hide");
@@ -207,9 +287,6 @@ export default {
       });
     },
   },
-  watch: {
-    function() {},
-  },
 };
 </script>
 
@@ -238,6 +315,8 @@ export default {
         > div:first-child {
           h3 {
             position: relative;
+            font-family: "Poppins", sans-serif;
+            font-size: 26px;
             &::before {
               content: "";
               position: absolute;
@@ -250,9 +329,13 @@ export default {
           }
         }
       }
-
-      .Card:nth-of-type(2):not(.dashboard-info .Card),
-      .Card:nth-of-type(3) {
+      .Card:nth-of-type(1) {
+        h3 {
+          font-family: "Poppins", sans-serif;
+          font-size: 24px;
+        }
+      }
+      .Card:nth-of-type(2) {
         max-width: 500px;
         margin-top: 40px;
         margin-bottom: 40px;
@@ -260,17 +343,19 @@ export default {
           max-width: 600px;
         }
         h3 {
+          font-family: "Poppins", sans-serif;
+          font-size: 24px;
           @include breakpoints(mobile) {
-            font-size: 18px;
+            font-size: 22px;
           }
         }
 
         p:nth-child(1) {
           color: rgb(86, 86, 87);
-          font-size: 17px;
+          font-size: 19px;
           margin-bottom: 5px;
           @include breakpoints(mobile) {
-            font-size: 14px;
+            font-size: 17px;
           }
           span {
             cursor: pointer;
@@ -281,7 +366,7 @@ export default {
         }
         > div:nth-child(3) {
           background-color: #dbddf780;
-          padding: 20px;
+          padding: 20px 15px;
           margin-top: 20px;
           .Hidden {
             display: none !important;
@@ -295,22 +380,38 @@ export default {
         }
       }
       .Card:nth-of-type(3) {
-        p:nth-child(3) {
-          font-size: 18px;
-          color: #515661;
-          width: 100%;
-          max-width: 300px;
-          letter-spacing: 1px;
+        max-width: 500px;
+        h3 {
+          font-family: "Poppins", sans-serif;
+          font-size: 24px;
+          @include breakpoints(mobile) {
+            font-size: 20px;
+          }
+        }
+        a {
+          color: #6864b9;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        .HideRecommend {
+          display: none;
+        }
+        .HideRe {
+          display: none;
         }
       }
     }
     .blue-Card {
       background-color: #bddfeb;
       border-radius: 25px;
-      .courses-board {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      .StudentCourses {
         h3 {
           font-weight: 600;
-          font-size: 28px;
+          font-size: 25px;
+          font-family: "Poppins", sans-serif;
           span {
             background-color: white;
             color: #2596be;
@@ -322,8 +423,6 @@ export default {
         }
         div {
           background-color: white;
-          display: flex;
-          align-items: center;
           padding: 6px 20px;
           border-radius: 25px;
           width: 100%;
