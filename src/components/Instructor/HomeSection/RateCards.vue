@@ -5,13 +5,17 @@
         <img class="img-fluid me-3" src="../../../assets/cheif1.jpg" alt="" />
         <span>Shon Smith</span>
       </div>
-      <span>Very Good</span>
       <div>
-        <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
-        <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
-        <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
-        <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
-        <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
+        <div class="text-center d-flex flex-column flex-sm-row">
+          <span class="me-sm-4">Very Good</span>
+          <div class="d-inline">
+            <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
+            <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
+            <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
+            <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
+            <span class="Stars"><i class="fa-solid fa-star me-1"></i></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

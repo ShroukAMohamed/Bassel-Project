@@ -26,7 +26,7 @@
                   <img src="../../assets/locked.png" alt="" />
                   <span class="ms-sm-3 mt-3 mt-sm-0">Login As :-</span>
                 </div>
-                <form class="mt-sm-5" @submit.prevent="student_dashboard">
+                <form class="mt-sm-5 mt-4" @submit.prevent="student_dashboard">
                   <input class="d-block" type="submit" value="Student" />
                 </form>
                 <form @submit.prevent="client_dashboard">
