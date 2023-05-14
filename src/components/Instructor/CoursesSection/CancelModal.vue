@@ -17,7 +17,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body mb-5">
+          <div class="modal-body mb-4">
             <div class="modal-card d-flex justify-content-center">
               <div class="edit-card">
                 <div class="d-flex justify-content-center align-items-center">

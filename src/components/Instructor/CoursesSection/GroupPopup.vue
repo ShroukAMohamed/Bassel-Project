@@ -28,8 +28,11 @@
                 />
                 <h3 class="mb-0 ms-3 text-start">Sessions</h3>
               </div>
-              <div class="p-0">
-                <table id="myTable" class="table table-bordered mt-5">
+              <div class="table-responsive dtable-container p-0">
+                <table
+                  id="myTable"
+                  class="table table-striped table-hover dt-responsive display nowrap table-bordered mt-5"
+                >
                   <thead>
                     <tr>
                       <th>Sessions</th>
@@ -185,6 +188,7 @@ export default {
     margin: auto;
     padding-bottom: 20px;
     table {
+      width: 100%;
       tr {
         td:nth-child(3),
         td:nth-child(4) {
