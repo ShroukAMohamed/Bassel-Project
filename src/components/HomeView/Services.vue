@@ -20,7 +20,7 @@
                     Mauris imperdiet orci dapibus, commodo libero nec, interdum
                     tortor Mauris.
                   </p>
-                  <button class="mb-4 mt-4">Contact Us</button>
+                  <div class="pb-4 mt-4"><a href="#Contact">Contact Us</a></div>
                 </div>
               </div>
             </div>
@@ -37,7 +37,7 @@
                     Mauris imperdiet orci dapibus, commodo libero nec, interdum
                     tortor Mauris.
                   </p>
-                  <button class="mb-4 mt-4">Contact Us</button>
+                  <div class="pb-4 mt-4"><a href="#Contact">Contact Us</a></div>
                 </div>
               </div>
             </div>
@@ -54,7 +54,7 @@
                     Mauris imperdiet orci dapibus, commodo libero nec, interdum
                     tortor Mauris.
                   </p>
-                  <button class="mb-4 mt-4">Contact Us</button>
+                  <div class="pb-4 mt-4"><a href="#Contact">Contact Us</a></div>
                 </div>
               </div>
             </div>
@@ -159,16 +159,18 @@ export default {
         font-size: 18px;
       }
       p {
-        width: 80%;
+        width: 95%;
+        max-width: 250px;
         margin: auto;
       }
-      button {
+      a {
         background-color: transparent;
         border: 0;
         color: #6864b9;
         font-weight: 600;
         font-size: 18px;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
     .serviceNum {

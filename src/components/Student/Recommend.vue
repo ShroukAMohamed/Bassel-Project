@@ -23,7 +23,9 @@
         {{ Num_Groups }}</span
       >
     </div>
-    <button class="mb-0 mt-4 btn btn-danger">Enroll Now</button>
+    <div class="mb-0 mt-4">
+      <router-link to="/Enroll">Enroll Now</router-link>
+    </div>
   </div>
 </template>
 
@@ -66,6 +68,13 @@ export default {
       color: #ffb12b !important;
       font-size: 17px !important;
       margin: 0 2px;
+    }
+  }
+  div {
+    a {
+      color: #6864b9;
+      cursor: pointer;
+      text-decoration: underline;
     }
   }
 }

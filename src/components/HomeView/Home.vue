@@ -23,24 +23,21 @@
                 <div
                   class="d-flex flex-column flex-sm-row text-center align-items-center justify-content-center"
                 >
-                  <img src="../../assets/MaskGroup5.svg" alt="" />
-                  <span class="ms-sm-3 mt-3 mt-sm-0">Login As Student</span>
+                  <img src="../../assets/locked.png" alt="" />
+                  <span class="ms-sm-3 mt-3 mt-sm-0">Login As :-</span>
                 </div>
                 <form class="mt-sm-5" @submit.prevent="student_dashboard">
-                  <input
-                    class="d-block"
-                    placeholder="Email"
-                    type="text"
-                    required
-                  />
-                  <input
-                    class="d-block"
-                    placeholder="Password"
-                    type="text"
-                    required
-                  />
-                  <div class="d-flex justify-content-center mt-5 mb-5">
-                    <input type="submit" value="Login" />
+                  <input class="d-block" type="submit" value="Student" />
+                </form>
+                <form @submit.prevent="client_dashboard">
+                  <div class="d-flex justify-content-center mt-4 mb-4">
+                    <input type="submit" value="Client" />
+                  </div>
+                </form>
+
+                <form @submit.prevent="instructor_dashboard">
+                  <div class="d-flex justify-content-center mb-5">
+                    <input type="submit" value="Instructor" />
                   </div>
                 </form>
               </div>
@@ -69,11 +66,7 @@
             <div
               class="mt-5 d-flex flex-column w-100 align-items-center align-items-md-start"
             >
-              <button @click="showModal = true">Login As A Student</button>
-
-              <router-link class="mt-4 client" to="/Client"
-                >Login As Client</router-link
-              >
+              <button @click="showModal = true">Login</button>
             </div>
           </div>
           <div
@@ -99,7 +92,13 @@ export default {
   },
   methods: {
     student_dashboard() {
-      this.$router.push("/Dashboard");
+      this.$router.push("/Student");
+    },
+    client_dashboard() {
+      this.$router.push("/Client");
+    },
+    instructor_dashboard() {
+      this.$router.push("/Instructor");
     },
   },
 };
@@ -129,7 +128,7 @@ export default {
     .modal-card {
       background-color: white;
       width: 100%;
-      max-width: 700px;
+      max-width: 600px;
       border-radius: 30px;
       margin: auto;
       border: 0.8px solid black;
@@ -139,37 +138,29 @@ export default {
       span {
         font-size: 30px;
         font-weight: 600;
+        font-family: "poppins", serif;
         letter-spacing: 1px;
-      }
-      input {
-        width: 90%;
-        max-width: 350px;
-        padding: 13px 50px;
-        margin: auto;
-        margin-top: 25px;
-        border-radius: 25px;
-        border: 0.8px solid black;
-        &:focus {
-          outline: #292341;
-          outline: none;
-        }
       }
 
       input[type="submit"] {
         border: 0;
-        font-size: 18px;
-        border: 0;
-        color: white;
+        font-size: 19px;
+        border: 1px solid #2537e0;
+        color: #2537e0;
         box-shadow: 0px 3px 6px #2923417a;
         text-decoration: none;
-        padding: 10px 30px;
+        padding: 10px 0;
         margin: auto;
         border-radius: 25px;
         background-color: transparent;
-        background-color: #292341;
+        background-color: white;
         text-align: center;
         width: 100%;
-        max-width: 200px;
+        max-width: 250px;
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
@@ -224,45 +215,27 @@ export default {
     }
   }
 
-  button:not(.btn-close),
-  a {
+  button:not(.btn-close) {
     border: 0;
     background-color: transparent;
-    color: whitesmoke;
     letter-spacing: 1px;
-    font-size: 19px;
-    border-radius: 28px;
-    width: 100%;
-    max-width: 280px;
-    @include breakpoints(mobile) {
-      font-size: 16px;
-      width: 80%;
-    }
-  }
-
-  button:first-of-type:not(.btn-close) {
+    font-size: 20px;
     color: whitesmoke;
     background: transparent linear-gradient(180deg, #2596be 0%, #2503f3) 0% 0%
       no-repeat padding-box;
     opacity: 1;
     box-shadow: 0px 3px 6px #292341;
-    padding: 13px 0;
+    padding: 10px 0;
     transition: all 0.3s;
     &:hover {
       transform: translateY(-4px);
     }
-  }
-
-  .client {
-    background-color: white;
-    border: 1px solid #2537e0;
-    padding: 13px 0;
-    text-decoration: none;
-    color: #250eee;
-    text-align: center;
-    transition: all 0.3s;
-    &:hover {
-      transform: translateY(-4px);
+    border-radius: 28px;
+    width: 100%;
+    max-width: 250px;
+    @include breakpoints(mobile) {
+      font-size: 16px;
+      width: 80%;
     }
   }
 }

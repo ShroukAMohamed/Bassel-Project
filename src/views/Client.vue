@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar />
     <PaymentComponent />
     <VisaMethod />
     <SuccessComponent />
@@ -84,6 +85,7 @@
 </template>
 
 <script>
+import Navbar from "@/components/global/Navbar.vue";
 import PaymentComponent from "../components/payment.vue";
 import VisaMethod from "../components/VisaMethod.vue";
 import SuccessComponent from "../components/Success.vue";
@@ -107,6 +109,7 @@ export default {
     };
   },
   components: {
+    Navbar,
     PaymentComponent,
     VisaMethod,
     SuccessComponent,

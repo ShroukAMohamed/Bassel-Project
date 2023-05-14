@@ -2,7 +2,7 @@
   <div class="Navbar">
     <nav class="navbar navbar-expand-lg w-100 position-fixed top-0 pt-3">
       <div class="container">
-        <a href="/#Home" class="brand"></a>
+        <router-link to="/" class="brand"></router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -46,13 +46,11 @@
                 <a data-scroll="Jobs" class="nav-link" href="/#Jobs">Jobs</a>
               </li>
               <li @mouseover="ActiveLink" class="nav-item">
-                <a data-scroll="About" class="nav-link" href="/#About"
-                  >About Us</a
-                >
+                <a data-scroll="About" class="nav-link" href="/#About">About</a>
               </li>
               <li @mouseover="ActiveLink" class="nav-item">
                 <a data-scroll="Contact" class="nav-link" href="/#Contact"
-                  >Contact Us</a
+                  >Contact</a
                 >
               </li>
             </ul>
@@ -70,15 +68,6 @@ export default {
   name: "NavBar",
   mounted() {
     // $("body").css("paddingTop", $(".Navbar").innerHeight());
-    $(".Navbar li a").click(function () {
-      $("html, body").animate(
-        {
-          // eslint-disable-next-line prettier/prettier
-          scrollTop: $("#" + $(this).data("scroll")).offset().top + 1,
-        },
-        100
-      );
-    });
     $(window).scroll(function () {
       $(".block").each(function () {
         if ($(window).scrollTop() > $(this).offset().top - 80) {

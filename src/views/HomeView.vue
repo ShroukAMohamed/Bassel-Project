@@ -1,5 +1,6 @@
 <template>
   <div class="Home">
+    <Navbar />
     <HomeComponent />
     <ServicesComponent />
     <div class="container">
@@ -30,6 +31,7 @@
 </style>
 
 <script>
+import Navbar from "@/components/global/Navbar.vue";
 import FooterA from "../components/global/Footer.vue";
 import HomeComponent from "../components/HomeView/Home";
 import ServicesComponent from "../components/HomeView/Services.vue";
@@ -44,6 +46,7 @@ export default {
   components: {
     FooterA,
     HomeComponent,
+    Navbar,
     ServicesComponent,
     CoursesComponent,
     // ChartsComponent,

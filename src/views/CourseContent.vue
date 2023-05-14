@@ -1,5 +1,6 @@
 <template>
   <div class="Courses">
+    <Navbar />
     <section id="CourseContent">
       <div
         class="gray-img d-flex align-items-sm-center pt-5 pt-sm-0 overflow-hidden"
@@ -171,6 +172,7 @@
 </template>
 
 <script>
+import Navbar from "@/components/global/Navbar.vue";
 import $ from "jquery";
 import FooterA from "../components/global/Footer.vue";
 import GroupCard from "../components/CourseContent/GroupCard.vue";
@@ -227,7 +229,7 @@ export default {
       ],
     };
   },
-  components: { FooterA, GroupCard },
+  components: { FooterA, GroupCard, Navbar },
   methods: {
     showFunction() {
       $(".Hide").fadeIn();

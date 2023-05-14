@@ -21,14 +21,19 @@ const routes = [
     component: () => import("../views/Enroll.vue"),
   },
   {
-    path: "/Dashboard",
-    name: "DashBoard",
+    path: "/Student",
+    name: "Student",
     component: () => import("../views/Student.vue"),
   },
   {
     path: "/Client",
     name: "Client",
     component: () => import("../views/Client.vue"),
+  },
+  {
+    path: "/Instructor",
+    name: "Istructor",
+    component: () => import("../views/Instructor.vue"),
   },
   // {
   //   path: "/about",

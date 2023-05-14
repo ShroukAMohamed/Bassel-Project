@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar />
     <div class="dashboard-img">
       <div class="container">
         <div class="Container-div">
@@ -194,6 +195,7 @@
 </template>
 
 <script>
+import Navbar from "@/components/global/Navbar.vue";
 import ReviewPopup from "../components/Student/Review.vue";
 import AttendPopup from "../components/Student/AttendPopup.vue";
 import RegistInfo from "../components/Registered.vue";
@@ -236,6 +238,7 @@ export default {
     };
   },
   components: {
+    Navbar,
     ReviewPopup,
     AttendPopup,
     RegistInfo,

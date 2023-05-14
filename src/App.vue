@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavBar />
+    <!-- <NavBar /> -->
     <router-view />
   </div>
 </template>
@@ -12,6 +12,7 @@ body {
   scroll-behavior: smooth;
 }
 @import url("https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 </style>
 
 <script>
@@ -21,10 +22,15 @@ Vue.mixin({
     window.scrollTo(0, 0);
   },
 });
-import NavBar from "@/components/global/Navbar.vue";
+// import NavBar from "@/components/global/Navbar.vue";
 export default {
-  components: { NavBar },
+  // components: { NavBar },
   mounted() {
+    // if (document.URL.indexOf("/Instructor")) {
+    //   $(".Navbar").addClass("d-none");
+    // } else {
+    //   $(".Navbar").removeClass("d-none");
+    // }
     let script = document.createElement("script");
     script.setAttribute(
       "src",

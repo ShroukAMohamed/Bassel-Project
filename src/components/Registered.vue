@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="form-card mt-5 mb-5">
-      <h3 class="pt-3 pb-2 ms-5">Your Registered Info</h3>
+      <h3 class="pt-3 pb-2 ms-sm-5 text-center text-sm-start">
+        Your Registered Info
+      </h3>
       <div class="line"></div>
       <form action="">
         <div class="d-flex flex-column mt-5 mb-5">
@@ -66,7 +68,7 @@ export default {
 @import "./global/scss/main.scss";
 .form-card {
   background-image: white;
-  box-shadow: 0px 3px 6px #2923417a;
+  box-shadow: 0px 3px 12px #00000029;
   border-radius: 20px;
   padding-top: 10px;
   padding-bottom: 40px;

@@ -1,5 +1,6 @@
 <template>
   <div class="Enroll d-flex justify-content-center align-items-center">
+    <Navbar />
     <PaymentComponent />
     <VisaMethod />
     <SuccessComponent />
@@ -88,6 +89,7 @@
 </template>
 
 <script>
+import Navbar from "@/components/global/Navbar.vue";
 import hide_model from "../../mixin/hide_model";
 import PaymentComponent from "../components/payment.vue";
 import SuccessComponent from "../components/Success.vue";
@@ -113,7 +115,13 @@ export default {
       N_Available: "40",
     };
   },
-  components: { PaymentComponent, SuccessComponent, VisaMethod, enrollForm },
+  components: {
+    Navbar,
+    PaymentComponent,
+    SuccessComponent,
+    VisaMethod,
+    enrollForm,
+  },
   mixins: [hide_model],
   // methods: {
   //  validCard() {
