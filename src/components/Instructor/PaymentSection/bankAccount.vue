@@ -8,7 +8,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content rounded-5">
+        <div class="modal-content rounded-4">
           <div class="modal-header">
             <button
               type="button"
@@ -17,48 +17,40 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            <div class="modal-card d-flex justify-content-center">
-              <div class="edit-card">
-                <div class="d-flex justify-content-center align-items-center">
-                  <img src="../../../assets/payment_icon.png" alt="" />
-                  <span>Add Account</span>
-                </div>
-                <div class="mt-5">
-                  <p>CARD NUMBER</p>
-                  <div class="card-number d-flex">
-                    <input id="number" type="text" />
-                    <div class="d-flex align-items-center">
-                      <img src="../../../assets/visa_card.png" alt="" />
-                    </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="modal-card d-flex justify-content-center pb-3">
+                <div class="edit-card">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img
+                      src="../../../assets/bank_card_checkout_online_payment method_icon.png"
+                      alt=""
+                    />
+                    <span>Add Account</span>
                   </div>
-                </div>
-                <div class="card-name mt-4">
-                  <p>CARDHOLDER NAME</p>
-                  <input type="text" />
-                </div>
-                <div class="expire-cvv d-flex mt-4 pb-4">
-                  <div>
-                    <p>EXPIRE DATE</p>
-                    <input id="expire" type="text" />
+                  <div class="BankCard mt-4">
+                    <p>ACCOUNT NUMBER</p>
+                    <input type="text" required />
                   </div>
-                  <div>
-                    <p>CVV</p>
-                    <input id="cvv" type="text" />
+                  <div class="BankCard mt-4">
+                    <p>BANK NAME</p>
+                    <input type="text" required />
+                  </div>
+                  <div class="BankCard mt-4">
+                    <p>IBAN NUMBER</p>
+                    <input type="text" required />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-primary rounded-5 pt-2 pb-2"
-              data-bs-dismiss="modal"
-            >
-              Change
-            </button>
-          </div>
+            <div class="modal-footer">
+              <input
+                type="submit"
+                value="Change"
+                class="btn btn-primary rounded-5 pt-2 pb-2 mt-2 mb-2"
+              />
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -73,77 +65,48 @@ export default {
 
 <style lang="scss" scoped>
 .modal-dialog {
-  max-width: 800px;
+  max-width: 500px;
   .modal-card {
     span {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 500;
-      margin-left: 20px;
+      margin-left: 15px;
       letter-spacing: 1px;
+      font-family: "Poppins", serif;
     }
     p {
       margin-bottom: 5px;
     }
     .edit-card {
+      width: 100%;
+      max-width: 300px;
+      margin: auto;
       input {
         padding: 10px;
-        border: 1px solid #bce0fd;
-        color: #2699fb;
         border-radius: 5px;
         font-size: 14px;
+        border: 1px solid rgb(170, 169, 169);
         &:focus {
           outline: none;
         }
       }
       p {
         font-size: 12px;
-        color: #2699fb;
-        font-weight: bold;
+        color: #676666;
+        font-weight: 500;
       }
-      div {
-        .card-number {
-          input {
-            width: 100%;
-            max-width: 200px;
-            &:focus {
-              outline: none;
-            }
-          }
-          div {
-            border: 1px solid #bce0fd;
-            padding: 0 15px;
-            border-radius: 5px;
-            margin-left: 10px;
-          }
-        }
-      }
-      .card-name {
+
+      .BankCard {
         input {
           width: 100%;
-          max-width: 300px;
-        }
-      }
-      .expire-cvv {
-        div:first-child {
-          input {
-            width: 100%;
-            max-width: 100px;
-          }
-        }
-        div:last-child {
-          margin-left: 10px;
-          input {
-            width: 100%;
-            max-width: 60px;
-          }
         }
       }
     }
   }
   .modal-footer {
-    button {
+    input {
       width: 100%;
-      max-width: 250px;
+      max-width: 200px;
       margin: auto;
     }
   }

@@ -54,7 +54,7 @@
           <i class="fa-solid fa-bars"></i>
         </div>
         <div class="Text">
-          <h3 class="mb-0 d-none d-sm-block">Welcome Back Jerry</h3>
+          <h3 class="mb-0 d-none d-sm-block ms-5">Welcome Back Jerry</h3>
         </div>
         <div class="user d-flex align-items-center me-3">
           <img class="me-3" src="../assets/cheif1.jpg" alt="" />

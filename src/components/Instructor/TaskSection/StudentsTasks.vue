@@ -27,7 +27,7 @@ export default {
   background-color: white;
   box-shadow: 0px 3px 12px #00000029;
   width: 100%;
-  max-width: 330px;
+  max-width: 300px;
   margin: auto;
   padding: 15px 0;
   border-radius: 10px;

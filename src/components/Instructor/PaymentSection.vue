@@ -1,6 +1,8 @@
 <template>
   <div class="container">
     <bankAccount />
+    <TotalEarning />
+    <DueAmount />
     <div class="row justify-content-between">
       <h2 class="text-center">Your Payments</h2>
       <div class="col-lg-4 col-md-6 col-12">
@@ -12,7 +14,13 @@
             <p>Not Transferred</p>
             <h3>$276</h3>
             <div class="d-flex justify-content-end me-3">
-              <button>Take Money</button>
+              <button
+                data-bs-target="#AmountModal"
+                data-bs-toggle="modal"
+                data-bs-dismiss="modal"
+              >
+                See Details
+              </button>
             </div>
           </div>
         </div>
@@ -24,7 +32,13 @@
             <p>From All Previous Courses</p>
             <h3>$500</h3>
             <div class="d-flex justify-content-end me-3">
-              <button>See Details</button>
+              <button
+                data-bs-target="#TotalModal"
+                data-bs-toggle="modal"
+                data-bs-dismiss="modal"
+              >
+                See Details
+              </button>
             </div>
           </div>
         </div>
@@ -34,8 +48,8 @@
           <div class="ms-4">
             <p>Your Bank Account</p>
             <p class="text-danger accepted">Only One Accepted</p>
-            <p>E-mail: <span>JerryGarret@gmail.com</span></p>
-            <p>Address: <span>Armenia, Cape Town</span></p>
+            <p>Account Number: <span>11256748</span></p>
+            <p>Bank Name: <span>Armenia, Cape Town</span></p>
             <div class="d-flex justify-content-end me-3">
               <button
                 data-bs-target="#AccountModal"
@@ -68,18 +82,24 @@
 
 <script>
 import bankAccount from "./PaymentSection/bankAccount.vue";
+import TotalEarning from "./PaymentSection/TotalEarning.vue";
+import DueAmount from "./PaymentSection/DueAmount.vue";
 export default {
   name: "PaymentSection",
-  components: { bankAccount },
+  components: { bankAccount, TotalEarning, DueAmount },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "../global/scss/main.scss";
 .container {
   h2 {
     margin-bottom: 70px;
     font-size: 40px;
     font-family: "Poppins", serif;
+    @include breakpoints(mobile) {
+      font-size: 35px;
+    }
   }
 
   .bgStyle {

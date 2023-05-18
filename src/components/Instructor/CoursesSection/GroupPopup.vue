@@ -31,7 +31,7 @@
               <div class="table-responsive dtable-container p-0">
                 <table
                   id="myTable"
-                  class="table table-striped table-hover dt-responsive display nowrap table-bordered mt-5"
+                  class="table table-striped dt-responsive display nowrap table-bordered mt-5"
                 >
                   <thead>
                     <tr>
@@ -46,104 +46,122 @@
                       <td>Session 1</td>
                       <td>Done</td>
                       <td class="text-center text-success">Attendance</td>
-                      <td
-                        data-bs-target="#cancelModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal"
-                        class="text-center text-danger"
-                      >
-                        Cancel
+                      <td>
+                        <button
+                          data-bs-target="#cancelModal"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                          class="text-center"
+                          disabled
+                        >
+                          Cancel
+                        </button>
                       </td>
                     </tr>
                     <tr>
                       <td>Session 2</td>
                       <td>Done</td>
                       <td class="text-center text-success">Attendance</td>
-                      <td
-                        data-bs-target="#cancelModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal"
-                        class="text-center text-danger"
-                      >
-                        Cancel
+                      <td>
+                        <button
+                          data-bs-target="#cancelModal"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                          class="text-center"
+                          disabled
+                        >
+                          Cancel
+                        </button>
                       </td>
                     </tr>
                     <tr>
                       <td>Session 3</td>
                       <td>Upcoming</td>
                       <td class="text-center text-success">Attendance</td>
-                      <td
-                        data-bs-target="#cancelModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal"
-                        class="text-center text-danger"
-                      >
-                        Cancel
+                      <td>
+                        <button
+                          data-bs-target="#cancelModal"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                          class="text-center text-danger"
+                        >
+                          Cancel
+                        </button>
                       </td>
                     </tr>
                     <tr>
                       <td>Session 4</td>
                       <td>Upcoming</td>
                       <td class="text-center text-success">Attendance</td>
-                      <td
-                        data-bs-target="#cancelModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal"
-                        class="text-center text-danger"
-                      >
-                        Cancel
+                      <td>
+                        <button
+                          data-bs-target="#cancelModal"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                          class="text-center text-danger"
+                        >
+                          Cancel
+                        </button>
                       </td>
                     </tr>
                     <tr>
                       <td>Session 5</td>
                       <td>Upcoming</td>
                       <td class="text-center text-success">Attendance</td>
-                      <td
-                        data-bs-target="#cancelModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal"
-                        class="text-center text-danger"
-                      >
-                        Cancel
+                      <td>
+                        <button
+                          data-bs-target="#cancelModal"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                          class="text-center text-danger"
+                        >
+                          Cancel
+                        </button>
                       </td>
                     </tr>
                     <tr>
                       <td>Session 6</td>
                       <td>Upcoming</td>
                       <td class="text-center text-success">Attendance</td>
-                      <td
-                        data-bs-target="#cancelModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal"
-                        class="text-center text-danger"
-                      >
-                        Cancel
+                      <td>
+                        <button
+                          data-bs-target="#cancelModal"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                          class="text-center text-danger"
+                        >
+                          Cancel
+                        </button>
                       </td>
                     </tr>
                     <tr>
                       <td>Session 7</td>
                       <td>Upcoming</td>
                       <td class="text-center text-success">Attendance</td>
-                      <td
-                        data-bs-target="#cancelModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal"
-                        class="text-center text-danger"
-                      >
-                        Cancel
+                      <td>
+                        <button
+                          data-bs-target="#cancelModal"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                          class="text-center text-danger"
+                        >
+                          Cancel
+                        </button>
                       </td>
                     </tr>
                     <tr>
                       <td>Session 8</td>
                       <td>Upcoming</td>
                       <td class="text-center text-success">Attendance</td>
-                      <td
-                        data-bs-target="#cancelModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal"
-                        class="text-center text-danger"
-                      >
-                        Cancel
+                      <td>
+                        <button
+                          data-bs-target="#cancelModal"
+                          data-bs-toggle="modal"
+                          data-bs-dismiss="modal"
+                          class="text-center text-danger"
+                        >
+                          Cancel
+                        </button>
                       </td>
                     </tr>
                   </tbody>
@@ -193,6 +211,12 @@ export default {
         td:nth-child(3),
         td:nth-child(4) {
           cursor: pointer;
+        }
+        td {
+          button {
+            border: 0;
+            background-color: transparent;
+          }
         }
       }
     }

@@ -86,6 +86,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../global/scss/main.scss";
 .row {
   .Card {
     background-color: white;
@@ -94,6 +95,9 @@ export default {
     border-radius: 10px;
     width: 100%;
     max-width: 400px;
+    @include breakpoints(small) {
+      max-width: 500px;
+    }
     margin: auto;
     h3 {
       font-size: 24px;
