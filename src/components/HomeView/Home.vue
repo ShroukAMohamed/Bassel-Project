@@ -128,7 +128,7 @@ export default {
     .modal-card {
       background-color: white;
       width: 100%;
-      max-width: 600px;
+      max-width: 500px;
       border-radius: 30px;
       margin: auto;
       border: 0.8px solid black;

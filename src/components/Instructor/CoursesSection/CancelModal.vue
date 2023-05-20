@@ -38,8 +38,8 @@
             <div class="modal-footer d-flex justify-content-center">
               <input
                 type="submit"
-                value="Change"
-                class="validation btn btn-primary rounded-5 pt-2 pb-2 mt-2 mb-2"
+                value="Request"
+                class="btn btn-primary rounded-5 pt-2 pb-2 mt-2 mb-2"
               />
             </div>
           </form>

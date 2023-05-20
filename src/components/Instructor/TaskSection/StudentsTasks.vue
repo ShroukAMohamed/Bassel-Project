@@ -9,8 +9,21 @@
         ></span>
       </p>
       <div>
-        <span class="me-2"> See Task </span>
-        <span> Rate Task </span>
+        <span
+          data-bs-target="#SeeTaskModal"
+          data-bs-toggle="modal"
+          data-bs-dismiss="modal"
+          class="me-2"
+        >
+          See Task
+        </span>
+        <span
+          data-bs-target="#RateTaskModal"
+          data-bs-toggle="modal"
+          data-bs-dismiss="modal"
+        >
+          Rate Task
+        </span>
       </div>
     </div>
   </div>
@@ -30,7 +43,7 @@ export default {
   max-width: 300px;
   margin: auto;
   padding: 15px 0;
-  border-radius: 10px;
+  border-radius: 25px;
   img {
     position: relative;
     top: 0;

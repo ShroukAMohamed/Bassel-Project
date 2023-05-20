@@ -1,5 +1,7 @@
 <template>
   <div>
+    <RateTask />
+    <SeeTask />
     <a class="UpArrow"><i class="fa-solid fa-arrow-up"></i></a>
     <div class="container">
       <div class="row justify-content-center">
@@ -10,7 +12,7 @@
             <div class="col-lg-5 col-12">
               <img
                 class="img-fluid"
-                src="../../assets/undraw_social_friends_re_7uaa.svg"
+                src="../../assets/undraw_working_remotely_re_6b3a.svg"
                 alt=""
               />
             </div>
@@ -25,7 +27,7 @@
             <div class="col-lg-5">
               <img
                 class="img-fluid"
-                src="../../assets/undraw_social_friends_re_7uaa.svg"
+                src="../../assets/undraw_working_remotely_re_6b3a.svg"
                 alt=""
               />
             </div>
@@ -40,7 +42,7 @@
             <div class="col-lg-5">
               <img
                 class="img-fluid"
-                src="../../assets/undraw_social_friends_re_7uaa.svg"
+                src="../../assets/undraw_working_remotely_re_6b3a.svg"
                 alt=""
               />
             </div>
@@ -80,10 +82,12 @@
 <script>
 import StudentTask from "./TaskSection/StudentsTasks.vue";
 import GroupsSessions from "./TaskSection/GroupsSessions.vue";
+import RateTask from "./TaskSection/RateTask.vue";
+import SeeTask from "./TaskSection/SeeTask.vue";
 import $ from "jquery";
 export default {
   name: "TaskSection",
-  components: { GroupsSessions, StudentTask },
+  components: { GroupsSessions, StudentTask, RateTask, SeeTask },
   mounted() {
     $(".Sessions a").click(function () {
       $(".showState").fadeIn();
@@ -119,7 +123,7 @@ export default {
 .GroupCard {
   background-color: white;
   box-shadow: 0px 3px 20px #00000029;
-  border-radius: 15px;
+  border-radius: 25px;
   padding-top: 25px;
   padding-bottom: 35px;
   width: 100%;

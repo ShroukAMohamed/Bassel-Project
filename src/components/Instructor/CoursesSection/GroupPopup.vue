@@ -1,6 +1,7 @@
 <template>
   <div>
     <CancelModal />
+    <StudentAttend />
     <div
       class="modal fade"
       id="GroupModal"
@@ -45,7 +46,14 @@
                     <tr>
                       <td>Session 1</td>
                       <td>Done</td>
-                      <td class="text-center text-success">Attendance</td>
+                      <td
+                        data-bs-target="#studentAttendModal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        class="text-center text-success"
+                      >
+                        Attendance
+                      </td>
                       <td>
                         <button
                           data-bs-target="#cancelModal"
@@ -61,7 +69,14 @@
                     <tr>
                       <td>Session 2</td>
                       <td>Done</td>
-                      <td class="text-center text-success">Attendance</td>
+                      <td
+                        data-bs-target="#studentAttendModal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        class="text-center text-success"
+                      >
+                        Attendance
+                      </td>
                       <td>
                         <button
                           data-bs-target="#cancelModal"
@@ -77,7 +92,14 @@
                     <tr>
                       <td>Session 3</td>
                       <td>Upcoming</td>
-                      <td class="text-center text-success">Attendance</td>
+                      <td
+                        data-bs-target="#studentAttendModal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        class="text-center text-success"
+                      >
+                        Attendance
+                      </td>
                       <td>
                         <button
                           data-bs-target="#cancelModal"
@@ -92,7 +114,14 @@
                     <tr>
                       <td>Session 4</td>
                       <td>Upcoming</td>
-                      <td class="text-center text-success">Attendance</td>
+                      <td
+                        data-bs-target="#studentAttendModal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        class="text-center text-success"
+                      >
+                        Attendance
+                      </td>
                       <td>
                         <button
                           data-bs-target="#cancelModal"
@@ -107,7 +136,14 @@
                     <tr>
                       <td>Session 5</td>
                       <td>Upcoming</td>
-                      <td class="text-center text-success">Attendance</td>
+                      <td
+                        data-bs-target="#studentAttendModal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        class="text-center text-success"
+                      >
+                        Attendance
+                      </td>
                       <td>
                         <button
                           data-bs-target="#cancelModal"
@@ -122,7 +158,14 @@
                     <tr>
                       <td>Session 6</td>
                       <td>Upcoming</td>
-                      <td class="text-center text-success">Attendance</td>
+                      <td
+                        data-bs-target="#studentAttendModal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        class="text-center text-success"
+                      >
+                        Attendance
+                      </td>
                       <td>
                         <button
                           data-bs-target="#cancelModal"
@@ -137,7 +180,14 @@
                     <tr>
                       <td>Session 7</td>
                       <td>Upcoming</td>
-                      <td class="text-center text-success">Attendance</td>
+                      <td
+                        data-bs-target="#studentAttendModal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        class="text-center text-success"
+                      >
+                        Attendance
+                      </td>
                       <td>
                         <button
                           data-bs-target="#cancelModal"
@@ -152,7 +202,14 @@
                     <tr>
                       <td>Session 8</td>
                       <td>Upcoming</td>
-                      <td class="text-center text-success">Attendance</td>
+                      <td
+                        data-bs-target="#studentAttendModal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        class="text-center text-success"
+                      >
+                        Attendance
+                      </td>
                       <td>
                         <button
                           data-bs-target="#cancelModal"
@@ -178,9 +235,10 @@
 <script>
 import $ from "jquery";
 import CancelModal from "./CancelModal.vue";
+import StudentAttend from "./StudentAttend.vue";
 export default {
   name: "GroupPopup",
-  components: { CancelModal },
+  components: { CancelModal, StudentAttend },
   mounted() {
     $("#myTable").DataTable({
       columns: [
