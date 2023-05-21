@@ -65,6 +65,7 @@
       </div>
     </div>
   </div>
+  <!--Home Section-->
 </template>
 
 <script>
