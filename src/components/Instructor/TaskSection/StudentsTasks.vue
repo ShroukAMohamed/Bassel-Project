@@ -13,7 +13,7 @@
           data-bs-target="#SeeTaskModal"
           data-bs-toggle="modal"
           data-bs-dismiss="modal"
-          class="me-2"
+          class="me-2 text-secondary"
         >
           See Task
         </span>

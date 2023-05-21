@@ -1,16 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="Card text-center">
-          <h3>Assigned Groups</h3>
-          <div class="mt-3 d-flex justify-content-center align-items-center">
-            <img src="../../assets/group_team_people_icon_48.png" alt="" />
-            <p class="ms-3 mt-2 mb-0">5 Groups</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 gy-5 gy-md-0">
+      <div class="col-lg-4 col-md-6 gy-1 gy-md-0 order-1 order-md-2">
         <div class="Card text-center">
           <h3>Overall Due Amount</h3>
           <div class="mt-3 d-flex justify-content-center align-items-center">
@@ -19,7 +10,16 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-12 gy-5 gy-lg-0">
+      <div class="col-lg-4 col-md-6 order-2 gy-5 gy-lg-0">
+        <div class="Card text-center">
+          <h3>Assigned Groups</h3>
+          <div class="mt-3 d-flex justify-content-center align-items-center">
+            <img src="../../assets/group_team_people_icon_48.png" alt="" />
+            <p class="ms-3 mt-2 mb-0">5 Groups</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-12 gy-5 gy-lg-0 order-3">
         <div class="Card text-center">
           <h3>Next Session Time</h3>
           <div class="mt-3 d-flex justify-content-center align-items-center">
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-6 order-last">
         <Registered
           :Full_Name="full_name"
           :Email="email"
@@ -42,7 +42,7 @@
           :Birth_Date="birth_date"
         />
       </div>
-      <div class="col-lg-6 gy-lg-5 mb-4">
+      <div class="col-lg-6 gy-5 mb-4 order-first order-md-last">
         <div class="RateCard ps-sm-4 pe-sm-4">
           <div
             class="d-flex flex-sm-row justify-content-between flex-column align-items-center"
@@ -90,7 +90,7 @@ export default {
 .row {
   .Card {
     background-color: white;
-    box-shadow: 0px 3px 12px #00000029;
+    box-shadow: 0px 3px 20px #00000029;
     padding: 30px 0;
     border-radius: 10px;
     width: 100%;
@@ -117,7 +117,7 @@ export default {
       font-weight: 500;
     }
   }
-  > div:first-child {
+  > div:nth-child(2) {
     .Card {
       background: transparent linear-gradient(90deg, #0387f3 0%, #19c9ff) 0% 0%
         no-repeat padding-box;
@@ -128,7 +128,7 @@ export default {
   .RateCard {
     background: transparent linear-gradient(90deg, #5dd1ff 0%, #80c4fe) 0% 0%
       no-repeat padding-box;
-    box-shadow: 0px 3px 12px #00000029;
+    box-shadow: 0px 3px 15px #00000029;
     padding: 36px 5px;
     border-radius: 10px;
     height: 100%;

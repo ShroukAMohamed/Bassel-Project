@@ -1,5 +1,5 @@
 <template>
-  <div class="SessionSlider ps-4 pe-4">
+  <div class="SessionSlider ps-sm-4 pe-sm-4">
     <div
       :id="carouselNo"
       class="carousel slide w-100"

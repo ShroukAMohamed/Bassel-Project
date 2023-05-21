@@ -68,7 +68,7 @@ export default {
 @import "./global/scss/main.scss";
 .form-card {
   background-image: white;
-  box-shadow: 0px 3px 12px #00000029;
+  box-shadow: 0px 3px 15px #00000029;
   border-radius: 20px;
   padding-top: 10px;
   padding-bottom: 40px;

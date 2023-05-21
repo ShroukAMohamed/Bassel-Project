@@ -24,7 +24,7 @@
                   class="img-fluid"
                   src="../../../assets/352275_cloud_download_icon_32.png"
                   alt=""
-                /><span class="ms-3 fw-bold text-center">Download Task</span>
+                /><span class="ms-2 fw-bold text-center">Download Task</span>
               </div>
               <form action="">
                 <div class="d-flex justify-content-center mt-4">

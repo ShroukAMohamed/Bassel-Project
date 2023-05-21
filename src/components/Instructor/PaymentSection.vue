@@ -5,7 +5,7 @@
     <DueAmount />
     <div class="row justify-content-between">
       <h2 class="text-center">Your Payments</h2>
-      <div class="col-lg-4 col-md-6 col-12">
+      <div class="col-lg-4 col-md-6 col-12 gy-5 gy-md-0 order-2 order-lg-1">
         <div
           class="paymentCard bgStyle d-flex flex-column justify-content-center"
         >
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-12 gy-5 gy-md-0">
+      <div class="col-lg-4 col-md-6 col-12 gy-lg-0 order-1 order-lg-2">
         <div class="paymentCard d-flex flex-column justify-content-center">
           <div class="ms-4">
             <p class="mb-2">Total Earnings</p>
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-12 gy-5 gy-lg-0">
+      <div class="col-lg-4 col-12 gy-5 gy-lg-0 order-3 order-lg-3">
         <div class="paymentCard">
           <div class="ms-4">
             <p>Your Bank Account</p>
@@ -62,14 +62,14 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 gy-5 d-none d-lg-block">
+      <div class="col-lg-5 gy-5 d-none d-lg-block order-4">
         <img
           class="img-fluid"
           src="../../assets/undraw_online_payments_re_y8f2.svg"
           alt=""
         />
       </div>
-      <div class="col-lg-4 col-8 gy-5">
+      <div class="col-lg-4 col-8 gy-5 order-last">
         <img
           class="img-fluid"
           src="../../assets/undraw_credit_card_re_blml.svg"
@@ -98,7 +98,8 @@ export default {
     font-size: 40px;
     font-family: "Poppins", serif;
     @include breakpoints(mobile) {
-      font-size: 35px;
+      font-size: 33px;
+      margin-bottom: 40px;
     }
   }
 
@@ -120,7 +121,7 @@ export default {
   }
   .paymentCard {
     background-color: white;
-    box-shadow: 0px 3px 12px #00000029;
+    box-shadow: 0px 3px 15px #00000029;
     width: 98%;
     margin: auto;
     height: 100%;

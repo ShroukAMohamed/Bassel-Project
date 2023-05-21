@@ -60,6 +60,10 @@ export default {
     margin-bottom: 80px;
     font-size: 38px;
     font-family: "Poppins", serif;
+    @include breakpoints(small) {
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
   }
 
   .cardStyle {
