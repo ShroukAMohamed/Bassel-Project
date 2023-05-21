@@ -329,7 +329,7 @@ export default {
         display: flex;
         align-items: center;
         padding-top: 80px;
-        @include breakpoints(small) {
+        @include breakpoints(mobile) {
           padding-top: 40px;
         }
       }

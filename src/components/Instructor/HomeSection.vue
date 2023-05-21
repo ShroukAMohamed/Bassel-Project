@@ -10,7 +10,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 order-2 gy-5 gy-lg-0">
+      <div class="col-lg-4 col-md-6 order-2 gy-5 gy-md-0">
         <div class="Card text-center">
           <h3>Assigned Groups</h3>
           <div class="mt-3 d-flex justify-content-center align-items-center">
