@@ -75,7 +75,7 @@ export default {
     span {
       font-size: 30px;
       font-weight: 500;
-      margin-left: 10px;
+      margin-left: 5px;
       letter-spacing: 1px;
     }
     p {

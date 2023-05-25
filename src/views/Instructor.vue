@@ -146,7 +146,7 @@ export default {
     position: fixed;
     width: 300px;
     height: 100%;
-    background-color: #1086ed;
+    background-color: #2b7de9;
     transition: 0.5s;
     overflow: hidden;
     @include breakpoints(medium) {
@@ -293,7 +293,10 @@ export default {
       }
 
       .Text {
-        font-family: "Poppins", serif;
+        h3 {
+          font-family: "Poppins", serif;
+          font-size: 27px;
+        }
       }
 
       .user {

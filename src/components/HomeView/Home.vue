@@ -24,7 +24,7 @@
                   class="d-flex flex-column flex-sm-row text-center align-items-center justify-content-center"
                 >
                   <img src="../../assets/locked.png" alt="" />
-                  <span class="ms-sm-3 mt-3 mt-sm-0">Login As :-</span>
+                  <span class="ms-sm-3 mt-3 ">Login As</span>
                 </div>
                 <form class="mt-sm-5 mt-4" @submit.prevent="student_dashboard">
                   <input class="d-block" type="submit" value="Student" />
@@ -144,7 +144,11 @@ export default {
 
       input[type="submit"] {
         border: 0;
-        font-size: 19px;
+        font-size: 18px;
+        @include breakpoints(mobile) {
+          font-size: 16px;
+          max-width: 200px;
+        }
         border: 1px solid #2537e0;
         color: #2537e0;
         box-shadow: 0px 3px 6px #2923417a;

@@ -98,7 +98,7 @@ export default {
     font-size: 40px;
     font-family: "Poppins", serif;
     @include breakpoints(mobile) {
-      font-size: 33px;
+      font-size: 38px;
       margin-bottom: 40px;
     }
   }

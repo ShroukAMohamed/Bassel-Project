@@ -27,7 +27,7 @@
                 /><span class="ms-2 fw-bold text-center">Rate Task</span>
               </div>
               <form action="">
-                <div class="mt-5 mb-4">
+                <div class="mt-4 mb-4">
                   <div class="Rate d-flex">
                     <span>Rate</span>
                     <div @mouseover="Rate" class="Stars ms-3">
